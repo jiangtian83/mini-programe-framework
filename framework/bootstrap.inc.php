@@ -52,10 +52,9 @@ $_W['clientip'] = CLIENT_IP;
 
 unset($configfile, $config);
 
-
+// 附件基目录
 define('ATTACHMENT_ROOT', IA_ROOT .'/attachment/');
 error_reporting(0);
-
 
 if(!in_array($_W['config']['setting']['cache'], array('mysql', 'memcache', 'redis'))) {
 	$_W['config']['setting']['cache'] = 'mysql';
