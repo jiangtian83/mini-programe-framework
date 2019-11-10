@@ -1,0 +1,5 @@
+<?php  defined("IN_IA") or define("IN_IA", true);
+defined("IA_ROOT") or define("IA_ROOT", APP_PATH);
+require(IA_ROOT . "/data/config.php");
+return array( "type" => "mysql", "hostname" => $config["db"]["master"]["host"], "database" => $config["db"]["master"]["database"], "username" => $config["db"]["master"]["username"], "password" => $config["db"]["master"]["password"], "hostport" => $config["db"]["master"]["port"], "dsn" => "", "params" => array( ), "charset" => $config["db"]["master"]["charset"], "prefix" => $config["db"]["master"]["tablepre"], "debug" => true, "deploy" => 0, "rw_separate" => false, "master_num" => 1, "slave_no" => "", "read_master" => false, "fields_strict" => true, "resultset_type" => "array", "auto_timestamp" => false, "datetime_format" => "Y-m-d H:i:s", "sql_explain" => false );
+?>

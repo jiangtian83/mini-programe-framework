@@ -1,0 +1,81 @@
+{template 'common/header'}
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            广告位
+        </h3>
+    </div>
+    <div class="panel-body">
+    	<div class="alert alert-warning" role="alert">请使用左侧最新的智能广告位，该功能为了兼容之前的老版本，故作保留</div>
+
+
+        <form class="form-horizontal" role="form" method="post" action="" name="submit">
+
+
+			<div class="form-group">
+				<label for="lastname" class="col-sm-3 control-label">一行一列广告图</label>
+				<div class="col-sm-9">
+					 <input type="hidden" name="token" value="{$_W['token']}" >	
+					 {php echo tpl_form_field_image('ad_img',$data['ad_img']);}
+				</div>
+				
+			</div>
+			
+			<div class="form-group">
+				<label for="firstname" class="col-sm-3 control-label">一行一列广告图链接地址</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control"  name="a1url"  value="{$data['a1url']}">
+					
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="lastname" class="col-sm-3 control-label">一行两列左侧广告图</label>
+				<div class="col-sm-9">
+					
+					 {php echo tpl_form_field_image('ad1_img',$data['ad1_img']);}
+				</div>
+				
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-3 control-label">一行两列左侧广告图链接地址</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control"  name="a2url"  value="{$data['a2url']}">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="lastname" class="col-sm-3 control-label">一行两列右侧广告图</label>
+				<div class="col-sm-9">
+				
+					 {php echo tpl_form_field_image('ad2_img',$data['ad2_img']);}
+				</div>
+				
+			</div>
+			<div class="form-group">
+				<label for="firstname" class="col-sm-3 control-label">一行两列右侧广告图链接地址</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control"  name="a3url"  value="{$data['a3url']}">
+					
+				</div>
+			</div>
+	
+
+			<div class="form-group">
+				
+				<div class="col-sm-offset-2 col-sm-9">
+					<input type="submit" name="submit" class="btn btn-default">
+					
+				</div>
+			</div>
+
+
+			
+	</form>
+	{$page}
+    </div>
+</div>
+
+
+{template 'common/footer'}

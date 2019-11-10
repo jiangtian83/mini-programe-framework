@@ -1,0 +1,25 @@
+<?php  ini_set("date.timezone", "Asia/Shanghai");
+require_once("../lib/WxPay.Api.php");
+require_once("WxPay.NativePay.php");
+require_once("log.php");
+$notify = new NativePay();
+$url1 = $notify->GetPrePayUrl("123456789");
+$input = new WxPayUnifiedOrder();
+$input->SetBody("test");
+$input->SetAttach("test");
+$input->SetOut_trade_no(WX_MCHID . date("YmdHis"));
+$input->SetTotal_fee("1");
+$input->SetTime_start(date("YmdHis"));
+$input->SetTime_expire(date("YmdHis", time() + 600));
+$input->SetGoods_tag("test");
+$input->SetNotify_url("http://paysdk.weixin.qq.com/example/notify.php");
+$input->SetTrade_type("NATIVE");
+$input->SetProduct_id("123456789");
+$result = $notify->GetPayUrl($input);
+$url2 = $result["code_url"];
+echo "\r\n\r\r\n<html>\r\r\n<head>\r\r\n    <meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\"/>\r\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /> \r\r\n    <title>微信支付样例-退款</title>\r\r\n</head>\r\r\n<body>\r\r\n\t<div style=\"margin-left: 10px;color:#556B2F;font-size:30px;font-weight: bolder;\">扫描支付模式一</div><br/>\r\r\n\t<img alt=\"模式一扫码支付\" src=\"http://paysdk.weixin.qq.com/example/qrcode.php?data=";
+echo urlencode($url1);
+echo "\" style=\"width:150px;height:150px;\"/>\r\r\n\t<br/><br/><br/>\r\r\n\t<div style=\"margin-left: 10px;color:#556B2F;font-size:30px;font-weight: bolder;\">扫描支付模式二</div><br/>\r\r\n\t<img alt=\"模式二扫码支付\" src=\"http://paysdk.weixin.qq.com/example/qrcode.php?data=";
+echo urlencode($url2);
+echo "\" style=\"width:150px;height:150px;\"/>\r\r\n\t\r\r\n</body>\r\r\n</html>";
+?>

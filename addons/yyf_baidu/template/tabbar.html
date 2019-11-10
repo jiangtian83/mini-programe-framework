@@ -1,0 +1,192 @@
+{template 'common/header'}
+<style type="text/css">
+	.col-sm-3 input,.col-sm-2 input{ float: left; width: 20px; height: 20px;} 
+	.info{ margin:5px 0 0 5px; }
+	TEXTAREA{ width: 200px; height: 170px; }
+</style>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            底部菜单自定义  <a href="http://iconfont.cn/" style="margin-left: 10px; color: red;" target="_blank">栏目图标素材地址</a> 
+        </h3>
+    </div>
+    <div class="panel-body">
+    	
+        <form class="form-horizontal" role="form" method="post" action="" name="submit">
+
+        	<div class="form-group">
+				<label  class="col-sm-2 control-label">未激活状态下文字颜色值</label>
+				<div class="col-sm-6">
+					{php echo tpl_form_field_color(color, $v['color']);}
+					
+					<input type="hidden" name="token" value="{$_W['token']}">
+				</div>
+				<div class="col-sm-4">
+					蓝色模板使用的是： #a9b7b7
+				</div>
+			</div>
+
+        	<div class="form-group">
+				<label  class="col-sm-2 control-label">激活状态下文字时颜色值</label>
+				<div class="col-sm-6">
+					{php echo tpl_form_field_color(sel_color, $v['sel_color']);}
+					
+				</div>
+				<div class="col-sm-4">
+					蓝色模板使用的是： #2d7dee
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">底部菜单背景颜色</label>
+				<div class="col-sm-6">
+					{php echo tpl_form_field_color(background_color, $v['background_color']);}
+					
+				</div>
+				<div class="col-sm-4">
+					一般默认为白色：#FFFFFF
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">底部菜单上方边框颜色</label>
+				<div class="col-sm-6">
+					{php echo tpl_form_field_color(border_color, $v['border_color']);}
+					
+				</div>
+				<div class="col-sm-4">
+					蓝色模板使用的是：#eeeeee
+				</div>
+			</div>
+			<div class="alert alert-info" role="alert">
+栏目图标：每组的第一个是未激活时显示的图标，第二个为激活状态时显示的图标<br>				
+栏目链接：<br>
+链接分类,直接填写分类ID<br>
+链接文章请在文章ID前边加a。举例:文章ID为12，填写a12即可。id可以在左侧分类管理或者内容管理里查看。<br>
+首页地址：index<br>
+联系我们地址：contact<br>
+表单地址：message<br>
+拨打电话：tel<br>
+一键导航：driver<br>
+链接外部网址：登录百度小程序官方后台->在左侧栏目里找到【设置】->开发设置->业务域名。添加上要跳转的外部链接网址。该网址必须是自己的网站并且有备案。然后在栏目链接地址框里输入上即可。例如：https://www.baidu.com/。注意第一个栏目一般是主页，不要加外链，另外个人申请的小程序不支持跳转。</div>
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">第一个菜单栏目名称</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control"  name="m1_name" value="{$v[m1_name]}" placeholder="栏目名称" style="width: 100px;">
+				</div>
+			</div>
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">第一个栏目链接地址</label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control"  name="m1_path" value="{$v[m1_path]}" style="width: 200px;">
+				</div>
+				
+			</div>
+			
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">第一个栏目图标</label>
+				<div class="col-sm-4">
+					 {php echo tpl_form_field_image('m1_img',$v['m1_img']);}
+				</div>
+
+				<div class="col-sm-4">
+					{php echo tpl_form_field_image('m1_selimg',$v['m1_selimg']);}
+				</div>
+				
+			</div>
+
+			<!-- 第二个栏目！！！！！！！！！！！！！！！！ -->
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">第二个栏目名称</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control"  name="m2_name" value="{$v[m2_name]}" placeholder="栏目名称" style="width: 100px;">
+				</div>
+			</div>
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">第二个栏目链接地址</label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control"  name="m2_path" value="{$v[m2_path]}" >
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">第二个栏目图标</label>
+				<div class="col-sm-4">
+					 {php echo tpl_form_field_image('m2_img',$v['m2_img']);}
+				</div>
+
+				<div class="col-sm-4">
+					{php echo tpl_form_field_image('m2_selimg',$v['m2_selimg']);}
+				</div>
+				
+			</div>
+
+			<!-- 第三个栏目！！！！！！！！！！！！！！！！ -->
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">第三个栏目名称</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control"  name="m3_name" value="{$v[m3_name]}" placeholder="栏目名称" style="width: 100px;">
+				</div>
+			</div>
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">第三个栏目链接地址</label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control"  name="m3_path" value="{$v[m3_path]}" >
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">第三个栏目图标</label>
+				<div class="col-sm-4">
+					 {php echo tpl_form_field_image('m3_img',$v['m3_img']);}
+				</div>
+
+				<div class="col-sm-4">
+					{php echo tpl_form_field_image('m3_selimg',$v['m3_selimg']);}
+				</div>
+			</div>
+			<!-- 第四个栏目！！！！！！！！！！！！！！！！ -->
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">第四个栏目名称</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control"  name="m4_name" value="{$v[m4_name]}" placeholder="栏目名称" style="width: 100px;">
+				</div>
+			</div>
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">第四个栏目链接地址</label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control"  name="m4_path" value="{$v[m4_path]}" >
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">第四个栏目图标</label>
+				<div class="col-sm-4">
+					 {php echo tpl_form_field_image('m4_img',$v['m4_img']);}
+				</div>
+
+				<div class="col-sm-4">
+					{php echo tpl_form_field_image('m4_selimg',$v['m4_selimg']);}
+				</div>
+			</div>
+
+		
+
+
+			<div class="form-group">
+				
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="submit" name="submit" class="btn btn-default">
+					
+				</div>
+			</div>
+
+
+			
+	</form>
+	{$page}
+    </div>
+</div>
+
+
+{template 'common/footer'}

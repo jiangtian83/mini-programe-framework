@@ -1,0 +1,152 @@
+{template 'common/header'}
+<style>
+	.hide{
+		display: none;
+	}
+</style>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            修改幻灯片
+        </h3>
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" role="form" method="post" action="" name="submit">
+			<div class="alert alert-info" role="alert">
+        		图片尺寸: 375*150像素(如果觉得不够清晰，可以变成750*300)
+        	</div>
+				   <input type="hidden" class="form-control"  name="id" value="{$data['id']}">
+					<input type="hidden" name="token" value="{$_W['token']}">
+			
+			
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">缩略图</label>
+				<div class="col-sm-10">
+
+					 {php echo tpl_form_field_image('thumb',$data['images']);}
+				</div>
+			</div>
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">排序</label>
+				<div class="col-sm-1">
+					<input type="text" class="form-control"  name="sortrank" value="{$data['sortrank']}" style="width:50px;" >
+				</div>
+				<div class="col-sm-2">
+					数字越大越靠前
+				</div>
+			</div>
+			<!--<div class="form-group">-->
+				<!--<label  class="col-sm-2 control-label">链接文章ID</label>-->
+				<!--<div class="col-sm-5">-->
+				<!--<input type="text" class="form-control"  name="aid" value="{$data['aid']}">-->
+					 <!---->
+				<!--</div>-->
+				<!--<div class="col-sm-5">-->
+					<!--在内容管理列表中，查看文章ID。-->
+				<!--</div>-->
+			<!--</div>-->
+			<div id="img1action">
+				<div class="form-group">
+					<label class="col-sm-2 control-label">点击幻灯片动作</label>
+					<div class="col-sm-8">
+						<label class="radio-inline">
+							<input type="radio" value="0" name="kind" {if $data['kind']==0} checked="checked" {/if}> 点击无效果
+						</label>
+						<label class="radio-inline">
+							<input type="radio" value="1" name="kind" {if $data['kind']==1} checked="checked" {/if}> 点击拨打电话
+						</label>
+						<label class="radio-inline">
+							<input type="radio" value="2" name="kind" {if $data['kind']==2} checked="checked" {/if}> 点击跳转
+						</label>
+						<label class="radio-inline">
+							<input type="radio" value="3" name="kind" {if $data['kind']==3} checked="checked" {/if}> 点击跳转小程序
+						</label>
+					</div>
+				</div>
+				<div class="form-group calling {if $data['kind']!='1'} hide {/if}">
+					<label class="col-sm-2 control-label">电话号码</label>
+					<div class="col-sm-5">
+						<input type="text" class="form-control" name="phone"  value="{$data['phone']}">
+					</div>
+				</div>
+				<div class="navurl {if $data['kind']!='2'} hide {/if}">
+					<div class="alert alert-info" role="alert">链接分类,直接填写分类ID<br>
+						链接文章请在文章ID前边加a。举例:文章ID为12，填写a12即可。id可以在左侧分类管理或者内容管理里查看。<br>
+						联系我们地址：contact<br>
+						表单地址：message<br>
+						一键导航：driver<br>
+						链接外部网址：登录小程序官方后台->在左侧栏目里找到【设置】->开发设置->业务域名。该网址必须是自己的网站并且有备案。另外个人申请的小程序不支持跳转。然后在栏目链接地址框里输入上即可。例如：https://www.baidu.com/<br>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">链接地址</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control"  name="url"  value="{$data['url']}">
+						</div>
+					</div>
+				</div>
+				<div class="form-group navapp {if $data['kind']!='3'} hide {/if}" >
+					<label class="col-sm-2 control-label">跳转小程序的appid</label>
+					<div class="col-sm-3">
+						<input type="text" class="form-control" name="appid"  value="{$data['appid']}">
+					</div>
+
+				</div>
+				<div class="form-group navapp {if $data['kind']!='3'} hide {/if}" >
+					<label class="col-sm-2 control-label">跳转小程序页面地址</label>
+					<div class="col-sm-5">
+						<input type="text" class="form-control" name="address" value="{$data['address']}">
+					</div>
+					<div class="col-sm-5">
+						每个小程序的地址都不同，本款小程序的主页地址是：yyf_baidu/pages/index/index
+					</div>
+				</div>
+			</div>
+
+
+			
+			<div class="form-group">
+				
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="submit" name="submit" class="btn btn-default">
+					
+				</div>
+			</div>
+
+
+			
+	</form>
+
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('input[name="kind"]').click(function () {
+            var copy_kind = $('input[type="radio"][name="kind"]:checked').val();
+            if (copy_kind == 0) {
+                $('.calling').addClass('hide');
+                $('.navapp').addClass('hide');
+                $('.navurl').addClass('hide');
+            }
+            if (copy_kind == 1) {
+                $('.calling').removeClass('hide');
+                $('.navapp').addClass('hide');
+                $('.navurl').addClass('hide');
+            }
+            if (copy_kind == 2) {
+                $('.calling').addClass('hide');
+                $('.navapp').addClass('hide');
+                $('.navurl').removeClass('hide');
+            }
+            if (copy_kind == 3) {
+                $('.calling').addClass('hide');
+                $('.navapp').removeClass('hide');
+                $('.navurl').addClass('hide');
+            }
+        })
+
+
+    })
+
+</script>
+
+{template 'common/footer'}

@@ -1,0 +1,52 @@
+<?php  namespace Guzzle\Http\Message;
+interface RequestInterface extends MessageInterface, \Guzzle\Common\HasDispatcherInterface 
+{
+	const STATE_NEW = "new";
+	const STATE_COMPLETE = "complete";
+	const STATE_TRANSFER = "transfer";
+	const STATE_ERROR = "error";
+	const GET = "GET";
+	const PUT = "PUT";
+	const POST = "POST";
+	const DELETE = "DELETE";
+	const HEAD = "HEAD";
+	const CONNECT = "CONNECT";
+	const OPTIONS = "OPTIONS";
+	const TRACE = "TRACE";
+	const PATCH = "PATCH";
+	public function __toString();
+	public function send();
+	public function setClient(\Guzzle\Http\ClientInterface $client);
+	public function getClient();
+	public function setUrl($url);
+	public function getUrl($asObject);
+	public function getResource();
+	public function getQuery();
+	public function getMethod();
+	public function getScheme();
+	public function setScheme($scheme);
+	public function getHost();
+	public function setHost($host);
+	public function getPath();
+	public function setPath($path);
+	public function getPort();
+	public function setPort($port);
+	public function getUsername();
+	public function getPassword();
+	public function setAuth($user, $password, $scheme);
+	public function getProtocolVersion();
+	public function setProtocolVersion($protocol);
+	public function getResponse();
+	public function setResponse(Response $response, $queued);
+	public function startResponse(Response $response);
+	public function setResponseBody($body);
+	public function getResponseBody();
+	public function getState();
+	public function setState($state, array $context);
+	public function getCurlOptions();
+	public function getCookies();
+	public function getCookie($name);
+	public function addCookie($name, $value);
+	public function removeCookie($name);
+}
+?>
