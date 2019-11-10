@@ -1,0 +1,203 @@
+{template 'common/header'}
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            修改内容
+        </h3>
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" role="form" method="post" action="" name="submit">
+        	<div class="alert alert-info" role="alert">
+        		图片尺寸: [新闻缩略图->228*150],[一行两列缩略图->346*210],[一行一列缩略图->533*300]单位为像素
+        	</div>
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">内容标题</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control"  name="title" value="{$data['title']}">
+					<input type="hidden" name="token" value="{$_W['token']}">
+					<input type="hidden" name="aid" value="{$data['id']}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">分类</label>
+				<div class="col-sm-10">
+					 <select class="form-control" name="cid" style="width: 50%;" id="cate"> 
+					 	{loop $list $index $item}
+					 		<option value="{$item['id']}" {if $item[id]==$data[cid]} selected="selected" {/if} test="{$item['type']}">{$item['name']}</option>
+					 		{loop $item['son'] $index1 $item1}
+					 			<option value="{$item1['id']}" {if $item1[id]==$data[cid]} selected="selected" {/if} test="{$item['type']}">&nbsp;&nbsp;&nbsp;&nbsp;___{$item1['name']}</option>
+					 		{/loop}
+					 	{/loop}
+					 </select>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">缩略图</label>
+				<div class="col-sm-10">
+					 {php echo tpl_form_field_image('thumb',$data['thumb']);}
+				</div>
+			</div>
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">时间</label>
+				<div class="col-sm-10" style="width: 50%;">
+					{php echo tpl_form_field_date('addtime',$data['addtime']);}
+				</div>
+			</div>
+			<div class="form-group">
+				<label  class="col-sm-2 control-label">排序(越大越靠前)</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control"  name="sortrank" style="width: 100px;" value="{$data[sortrank]}">
+				</div>
+				<label  class="col-sm-1 control-label">阅读数</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control"  name="read_num" style="width: 100px;" value="{$data['read_num']}" id="read_num">
+				</div>
+				<label  class="col-sm-1 control-label">点赞数</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control"  name="vote_num" style="width: 100px;" value="{$data['vote_num']}" id="vote_num">
+				</div>
+			</div>
+
+
+
+
+			<div class="alert alert-info " role="alert" style="padding-top: 4px;padding-bottom:4px;">
+				使用方法：将腾讯视频的播放地址，复制到下边框里即可(不支持VIP或者版权电影电视剧)<br/>个别视频播放出现黑屏或播放时间不对都属正常情况，还是推荐传到第三方服务器上<a target="blank" href="http://blog.csdn.net/shaisuanqin4706/article/details/79259144" style="color: red">【音频或视频使用说明】</a>
+			</div>
+        	<div class="form-group">
+				<label  class="col-sm-2 control-label">多媒体设置</label>
+				<div class="col-sm-8">
+					<label class="radio-inline">
+					  <input type="radio"  value="0" name="media_kind"  {if !$data[audio_src]}checked="checked"{/if}> 视频
+					</label>
+					<label class="radio-inline">
+					  <input type="radio"  value="1" name="media_kind" {if $data[audio_src]}checked="checked"{/if}> 音频
+					</label>
+				
+				</div>
+			</div>
+			<div class="form-group {if $data[audio_src]}hide{/if}" id="video_div" >
+				<label  class="col-sm-2 control-label">视频播放地址</label>
+				<div class="col-sm-6" >
+					<input type="text" class="form-control"  name="videosrc" value="{$data['videosrc']}">
+				</div>
+			</div>
+			<div id="audio_div" class="{if !$data[audio_src]}hide{/if}">
+				<div class="form-group" id="audio_adress">
+					<label  class="col-sm-2 control-label">音频播放地址</label>
+					<div class="col-sm-6" >
+						<input type="text" class="form-control"  name="audio_src" value="{$data['audio_src']}">
+					</div>
+				</div>
+				<div class="form-group" id="audio_adress">
+					<label  class="col-sm-2 control-label">音频名称和作者</label>
+					<div class="col-sm-2" >
+						<input type="text" class="form-control"  name="audio_name" value="{$data['audio_name']}">
+					</div>
+					<div class="col-sm-2" >
+						<input type="text" class="form-control"  name="audio_author" value="{$data['audio_author']}">
+					</div>
+					<div class="col-sm-2">名称和作者可以为空</div>
+				</div>
+				<div class="form-group">
+					<label  class="col-sm-2 control-label">音频背景图片</label>
+					<div class="col-sm-5">
+						 {php echo tpl_form_field_image('audio_img',$data['audio_img']);}
+					</div>
+					<div class="col-sm-5">
+						 <img src="{MODULE_URL}images/audio.jpg" />
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="form-group {if !$data[diyshare]}hide{/if}" id="diysharediv">
+				<label  class="col-sm-2 control-label">标题和图片</label>
+				<div class="col-sm-4" >
+					<input type="text" class="form-control"  name="sharetitle" value="{$data['sharetitle']}">
+				</div>
+				<div class="col-sm-3" >
+					{php echo tpl_form_field_image('shareimg',$data['shareimg']);}
+				</div>
+				<div class="col-sm-3" >
+					分享图片尺寸（600*500）px
+				</div>
+
+			</div>
+			<div  style="text-indent: 150px; font-size: 16px;">小程序暂时不支持复杂的格式文本，如果发现前台显示空白，请把内容复制到文本文档里中转一下。</div>
+			<div class="form-group" id="cotent">
+				<label  class="col-sm-2 control-label">内容</label>
+				<div class="col-sm-10">
+					{php echo tpl_ueditor('content',$data['content']);}
+				</div>
+			</div>
+
+			<div class="form-group">
+				
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="submit" name="submit" class="btn btn-default">
+					
+				</div>
+			</div>
+
+
+			
+	</form>
+	
+    </div>
+</div>
+
+<script type="text/javascript">
+	$(function(){
+		var catetype=$('#cate').find("option:selected").attr("test");
+		domhide(catetype);
+		$('#cate').change(function(){
+			var catetype=$(this).find("option:selected").attr("test");
+			domhide(catetype);
+		})
+		function domhide(catetype){
+			if(catetype=='6'){
+				$('#video_adress').hide();
+				$('#cotent').hide();
+				$('#appid').show();
+				$('#pageaddress').show();
+
+			}else{
+				$('#video_adress').show();
+				$('#cotent').show();
+				$('#appid').hide();
+				$('#pageaddress').hide();
+			}
+		}
+
+		//多媒体切换
+		$('input[name="media_kind"]').click(function(){
+			var copy_kind=$('input[type="radio"][name="media_kind"]:checked').val();
+			if(copy_kind==0){
+				$('#video_div').removeClass('hide');
+				$('#audio_div').addClass('hide');
+			}
+			if(copy_kind==1){
+					$('#video_div').addClass('hide');
+				$('#audio_div').removeClass('hide');
+			}
+			
+		})
+
+        //分享切换
+        $('input[name="diyshare"]').click(function(){
+            var copy_kind=$('input[type="radio"][name="diyshare"]:checked').val();
+            if(copy_kind==0){
+                $('#diysharediv').addClass('hide');
+            }
+            if(copy_kind==1){
+                $('#diysharediv').removeClass('hide');
+            }
+
+        })
+	})
+</script>
+{template 'common/footer'}

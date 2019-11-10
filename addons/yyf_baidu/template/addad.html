@@ -1,0 +1,295 @@
+{template 'common/header'}
+<style>
+    label{ font-weight:normal;}
+    .navapp,.navurl,.calling,#img2action,#adid{
+        display: none;
+    }
+    .navapp2,.navurl2,.calling2{
+        display: none;
+    }
+</style>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            添加智能广告位
+        </h3>
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" role="form" method="post" action="" name="submit">
+            <input type="hidden" name="token" value="{$_W['token']}">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">广告位样式</label>
+                <div class="col-sm-8">
+                    <label class="radio-inline">
+                        <input type="radio" value="0" name="style" checked="checked"> 一行一列广告图
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" value="1" name="style"> 一行两列广告图
+                    </label>
+                    <!--<label class="radio-inline">-->
+                    <!--<input type="radio" value="2" name="style"> 流量主-->
+                    <!--</label>-->
+                </div>
+            </div>
+            <div class="form-group" >
+                <label class="col-sm-2 control-label">广告图位置</label>
+                <div class="col-sm-5">
+                    <select class="form-control" name="position" style="width: 50%;" id="cate">
+                        {loop $polist $index $item}
+                        <option value="{$item['id']}" >{$item['name']}下方</option>
+                        {/loop}
+                    </select>
+                </div>
+
+            </div>
+            <div class="form-group" >
+                <label class="col-sm-2 control-label">广告位描述</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="adinfo" >
+                </div>
+
+            </div>
+
+            <div class="form-group" id="adid">
+                <label class="col-sm-2 control-label">广告位ID</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="adid" >
+                </div>
+
+            </div>
+
+
+            <div class="form-group" >
+                <label class="col-sm-2 control-label">上下方边距</label>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="topmargin" value="0">
+                </div>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" name="bottommargin" value="0">
+                </div>
+                <div class="col-sm-8">
+                    广告图距离上方和下方的间隙，默认为0。像素为px
+                </div>
+            </div>
+            <div class="form-group" id="adimg">
+                <label class="col-sm-2 control-label">图片上传</label>
+                <div class="col-sm-5" id="img1">
+                    {php echo tpl_form_field_image('imgurl1');}
+                </div>
+                <div class="col-sm-5" id="img2" style="display:none;">
+                    {php echo tpl_form_field_image('imgurl2');}
+                </div>
+            </div>
+            <div id="img1action">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">点击广告图1动作</label>
+                    <div class="col-sm-8">
+                        <label class="radio-inline">
+                            <input type="radio" value="0" name="kind" checked="checked"> 点击无效果
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" value="1" name="kind"> 点击拨打电话
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" value="2" name="kind"> 点击跳转
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" value="3" name="kind"> 点击跳转小程序
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group calling">
+                    <label class="col-sm-2 control-label">电话号码</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" name="phone" >
+                    </div>
+                </div>
+                <div class="navurl">
+                    <div class="alert alert-info" role="alert">链接分类,直接填写分类ID<br>
+                        链接文章请在文章ID前边加a。举例:文章ID为12，填写a12即可。id可以在左侧分类管理或者内容管理里查看。<br>
+                        联系我们地址：contact<br>
+                        表单地址：message<br>
+                        一键导航：driver<br>
+                        链接外部网址：登录小程序官方后台->在左侧栏目里找到【设置】->开发设置->业务域名。该网址必须是自己的网站并且有备案。另外个人申请的小程序不支持跳转。然后在栏目链接地址框里输入上即可。例如：https://www.baidu.com/<br>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">链接地址</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control"  name="url"  value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group navapp" >
+                    <label class="col-sm-2 control-label">跳转小程序的appid</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="appid" >
+                    </div>
+                </div>
+                <div class="form-group navapp" >
+                    <label class="col-sm-2 control-label">跳转小程序页面地址</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" name="address">
+                    </div>
+                    <div class="col-sm-5">
+                        每个小程序的地址都不同，本款小程序的主页地址是：yyf_baidu/pages/index/index
+                    </div>
+                </div>
+            </div>
+
+            <div id="img2action">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">点击广告图2动作</label>
+                    <div class="col-sm-8">
+                        <label class="radio-inline">
+                            <input type="radio" value="0" name="kind2" checked="checked"> 点击无效果
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" value="1" name="kind2"> 点击拨打电话
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" value="2" name="kind2"> 点击跳转
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" value="3" name="kind2"> 点击跳转小程序
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group calling2">
+                    <label class="col-sm-2 control-label">电话号码</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" name="phone2" >
+                    </div>
+                </div>
+                <div class="navurl2">
+                    <div class="alert alert-info" role="alert">链接分类,直接填写分类ID<br>
+                        链接文章请在文章ID前边加a。举例:文章ID为12，填写a12即可。id可以在左侧分类管理或者内容管理里查看。<br>
+                        联系我们地址：contact<br>
+                        表单地址：message<br>
+                        一键导航：driver<br>
+                        链接外部网址：登录小程序官方后台->在左侧栏目里找到【设置】->开发设置->业务域名。该网址必须是自己的网站并且有备案。另外个人申请的小程序不支持跳转。然后在栏目链接地址框里输入上即可。例如：https://www.baidu.com/<br>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">链接地址</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control"  name="url2"  value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group navapp2" >
+                    <label class="col-sm-2 control-label">跳转小程序的appid</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="appid2" >
+                    </div>
+                    <!--<div class="col-sm-7">-->
+                    <!--两个小程序必须同时绑定在同一个公众号下才可以跳转。具体绑定步骤：-->
+                    <!--登录公众号在左侧找到小程序管理栏目->添加->关联小程序-->
+                    <!--</div>-->
+                </div>
+                <div class="form-group navapp2" >
+                    <label class="col-sm-2 control-label">跳转小程序页面地址</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" name="address2">
+                    </div>
+                    <div class="col-sm-5">
+                        每个小程序的地址都不同，本款小程序的主页地址是：yyf_baidu/pages/index/index
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input type="submit" name="submit" class="btn btn-default">
+
+                </div>
+            </div>
+
+
+        </form>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $('input[name="style"]').click(function () {
+                var style_kind = $('input[type="radio"][name="style"]:checked').val();
+                if (style_kind == 0) {
+
+                    $('#img2action').hide();
+                    $('#adid').hide();
+                    $('#adimg').show();
+                    $('#img1').show();
+                    $('#img2').hide();
+
+                    $('#adimg').show();
+                    $('#img1action').show();
+                }else if(style_kind==1){
+
+                    $('#adimg').show();
+                    $('#img1').show();
+                    $('#img2').show();
+                    $('#img1action').show();
+                    $('#img2action').show();
+                    $('#adid').hide();
+                }else{
+                    $('#adid').show();
+
+                    $('#adimg').hide();
+                    $('#adimg').hide();
+                    $('#img2action').hide();
+                    $('#img1action').hide();
+
+                }
+
+            })
+
+
+            $('input[name="kind"]').click(function () {
+                var copy_kind = $('input[type="radio"][name="kind"]:checked').val();
+                if (copy_kind == 0) {
+                    $('.calling').hide();
+                    $('.navapp').hide();
+                    $('.navurl').hide();
+                }
+                if (copy_kind == 1) {
+                    $('.calling').show();
+                    $('.navapp').hide();
+                    $('.navurl').hide();
+                }
+                if (copy_kind == 2) {
+                    $('.calling').hide();
+                    $('.navapp').hide();
+                    $('.navurl').show();
+                }
+                if (copy_kind == 3) {
+                    $('.calling').hide();
+                    $('.navapp').show();
+                    $('.navurl').hide();
+                }
+            })
+
+            $('input[name="kind2"]').click(function () {
+                var copy_kind2 = $('input[type="radio"][name="kind2"]:checked').val();
+                if (copy_kind2 == 0) {
+                    $('.calling2').hide();
+                    $('.navapp2').hide();
+                    $('.navurl2').hide();
+                }
+                if (copy_kind2 == 1) {
+                    $('.calling2').show();
+                    $('.navapp2').hide();
+                    $('.navurl2').hide();
+                }
+                if (copy_kind2 == 2) {
+                    $('.calling2').hide();
+                    $('.navapp2').hide();
+                    $('.navurl2').show();
+                }
+                if (copy_kind2 == 3) {
+                    $('.calling2').hide();
+                    $('.navapp2').show();
+                    $('.navurl2').hide();
+                }
+            })
+        })
+
+    </script>
+    {template 'common/footer'}

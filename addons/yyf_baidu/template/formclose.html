@@ -1,0 +1,38 @@
+{template 'common/header'}
+<style type="text/css">
+    .type-parent span{ margin-left: 15px; }
+</style>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <a href="{url 'site/entry/formconfig',array('m'=>'yyf_baidu')}" style="margin-left: 10px; color: red;">返回</a>
+        </h3>
+    </div>
+    <div class="panel-body">
+       <form action="" method="post" class="form-horizontal form">
+            <input type="hidden" name="storeid" value="">
+            <div class="table-responsive panel-body">
+                <table class="table table-hover">
+                   
+                    <tbody id="level-list">
+                     <tr>
+                     <td><div class="type-parent" style="font-size: 16px;">修改：在小程序文件夹的根目录下找到app.js文件，然后找到"咨询业务"，换成你自己的（注意文字前后的标点符号不要删除），然后按ctrl+s保存</div>
+                     </td>
+                     </tr>
+                     <tr>
+                     <td><div class="type-parent" style="font-size: 16px;">删除：也是在app.js文件里，删除掉红框内代码，然后按ctrl+s保存（注意不要删错）: <img src="{$url}formclose.png" style=" width: 100%; height: 100%; margin-top: 15px;"></div>
+                    </td>
+                     </tr>
+
+                  
+                  
+                    </tbody>
+                </table>
+                
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{template 'common/footer'}

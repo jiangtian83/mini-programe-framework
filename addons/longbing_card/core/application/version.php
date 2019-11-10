@@ -1,0 +1,2 @@
+<?php  $version = array( "one_standard_free" => array( "name" => "1开免费版", "number" => 1, "cards" => 100 ), "one_standard" => array( "number" => 1, "name" => "1开标准版", "cards" => 0 ), "one_radar" => array( "number" => 1, "name" => "1开雷达版", "cards" => 0 ), "five_radar" => array( "number" => 5, "name" => "5开雷达版", "cards" => 0 ), "twenty_radar" => array( "number" => 20, "name" => "20开雷达版", "cards" => 0 ), "unlimit_full" => array( "number" => 0, "name" => "无限开全功能版", "cards" => 0 ) );
+?>

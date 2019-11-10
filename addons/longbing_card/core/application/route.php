@@ -1,0 +1,2 @@
+<?php  return array( "__pattern__" => array( "name" => "\\w+" ), "[hello]" => array( ":id" => array( "index/hello", array( "method" => "get" ), array( "id" => "\\d+" ) ), ":name" => array( "index/hello", array( "method" => "post" ) ) ) );
+?>

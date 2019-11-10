@@ -1,0 +1,2 @@
+<?php  return array( "__file__" => array( "common.php", "config.php", "database.php" ), "demo" => array( "__file__" => array( "common.php" ), "__dir__" => array( "behavior", "controller", "model", "view" ), "controller" => array( "Index", "Test", "UserType" ), "model" => array( "User", "UserType" ), "view" => array( "index/index" ) ) );
+?>

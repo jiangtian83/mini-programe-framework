@@ -1,0 +1,352 @@
+{template 'common/header'}
+<style type="text/css">
+  #cateurl{ display: none; }
+  #show_cate9_thumb_height{display: none; }
+  .nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:hover, .nav-tabs.nav-justified>.active>a:focus {
+    border: 1px solid #bce8f1;  color: #31708f; border-bottom: none;}
+</style>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title"> 添加分类   {if $isson==true}（单页面栏目不支持子类）{/if} </h3>
+  </div>
+  <div class="panel-body">
+    <ul class="nav nav-tabs nav-info nav-justified" id="myTab">
+      <li class="active"><a href="#home" data-toggle="tab"> 基本设置</a> </li>
+      <li><a href="#ios" data-toggle="tab"> 其他设置</a> </li>
+    </ul>
+    <form class="form-horizontal" role="form" method="post" action="" name="submit">
+      <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="home">
+          <div class="form-group">
+            <label  class="col-sm-2 control-label">分类名称</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control"  name="name">
+              <input type="hidden" name="token" value="{$_W['token']}">
+            </div>
+          </div>
+          {if $isson==true}
+          <div class="form-group">
+            <label  class="col-sm-2 control-label">父类：</label>
+            <div class="col-sm-10">
+              <select class="form-control" name="sonid" style="width: 100%;" >
+                {loop $cats $index $item}
+                <option value="{$item[id]}">{$item[name]}</option>
+                {/loop}
+              </select>
+            </div>
+          </div>
+          {/if}
+          <div class="form-group" {if $isson==true} style="display: none" {/if}>
+            <label  class="col-sm-2 control-label">分类图标</label>
+            <div class="col-sm-8"> {php echo tpl_form_field_image('thumb');} </div>
+            <div class="col-sm-2"> <a href="{url 'site/entry/choicecatimg',array('m'=>'yyf_baidu')}" style="margin-left: 10px; color: red; font-size: 18px;" target="blank"> 点击寻找素材</a> </div>
+          </div>
+          <div class="alert alert-info" role="alert" {if $isson==true} style="display: none" {/if}> 前五个类型，可以点这里查阅【<a href="{url 'site/entry/CateInfo',array('m'=>'yyf_baidu')}" style="color: red; font-size: 14px;" target="blank">栏目展示类型说明</a>】<br/>
+            跳转小程序专用：选择下方的【跳转小程序专用】，保存该分类后。在添加内容的时候，选择这个分类名称，就会显示具体的设置步骤。<br/>
+            首页播放视频专用：也是选择下方的【首页播放视频专用】。跟上边一样，在添加内容时，把视频播放地址复制到对应的输入框里即可.<br/>
+            外部链接专用：首页上的导航支持跳转到外部链接，选择下方的【外部链接专用】，就会显示具体的说明。<br/>
+          </div>
+          <div class="form-group" {if $isson==true} style="display: none" {/if}>
+            <label  class="col-sm-2 control-label">栏目展示类型</label>
+            <div class="col-sm-7">
+              <select class="form-control" name="type" style="width: 100%;" id="myselect">
+                <option value="1">一行两列图片列表页</option>
+                <option value="5">一行一列图片列表页</option>
+                <option value="9">一行可左右滑动图片列表页</option>
+                <option value="2">新闻列表页-带缩略图的</option>
+                <option value="4">新闻列表页-不带缩略图</option>
+                <option value="3">单页面</option>
+                <option value="6">跳转小程序专用</option>
+                <option value="7">首页播放视频专用</option>
+                <option value="8">外部链接专用</option>
+              </select>
+            </div>
+            <div class="col-sm-3"> </div>
+          </div>
+          <div class="form-group" {if $isson==true} style="display: none" {/if} id="show_cate1_thumb_height">
+            <label  class="col-sm-2 control-label">图片高度自定义</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control"  name="thumb_height" value="105">
+            </div>
+            <div class="col-sm-8"> 一行两列图片展示类型可以根据自己的需要自定义图片的高度，默认是高度105px<br/>
+              <img src="{$imgurl}cate0.jpg" /> </div>
+          </div>
+          <div class="form-group" {if $isson==true} style="display: none" {/if} id="show_cate9_thumb_height">
+            <label  class="col-sm-2 control-label">图片宽度和高度</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control"  name="thumb_width" value="160">
+              <input type="text" class="form-control"  name="thumb_height9" value="160">
+            </div>
+            <div class="col-sm-8"> 一行可左右滑动图片列表页展示类型可以根据自己的需要自定义图片的宽度和高度 <img src="{$imgurl}cate9.jpg" /><br/>
+            </div>
+          </div>
+          <div id="cateurl" {if $isson==true} style="display: none" {/if}>
+            <div class="alert alert-info"  role="alert"> 支持跳转的地址：<br>
+              联系我们地址：contact<br>
+              表单地址：message<br>
+              拨打电话：tel<br>
+              一键导航：driver<br>
+              链接外部网址：登录百度小程序官方后台->在左侧栏目里找到【设置】->开发设置->业务域名。该网址必须是自己的网站并且有备案。另外个人申请的小程序不支持跳转。然后在栏目链接地址框里输入上即可。例如：https://www.baidu.com/ </div>
+            <div class="form-group">
+              <label  class="col-sm-2 control-label">链接地址</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control"  name="cateurl" value="">
+              </div>
+            </div>
+          </div>
+          <div id="mycontent"  style="display: none" >
+            <!--<div class="form-group">-->
+              <!--<label  class="col-sm-2 control-label">单独设置首页内容</label>-->
+              <!--<div class="col-sm-6">-->
+                <!--<textarea class="form-control" name="desc"></textarea>-->
+              <!--</div>-->
+              <!--<div class="col-sm-4">-->
+                <!--有时类似于公司简介这种栏目，文字介绍太多时全部显示在首页影响美观。可以在这里单独设置显示在首页的内容概况。如果不设置，默认显示下方编辑里的内容。-->
+              <!--</div>-->
+            <!--</div>-->
+            <div  class="alert alert-danger">小程序暂时不支持复杂的格式文本，如果发现前台显示空白或是异常，请把内容复制到文本文档里中转一下。 </div>
+            <div class="form-group" >
+              <label  class="col-sm-2 control-label">单页面内容</label>
+              <div class="col-sm-10"> {php echo tpl_ueditor('content');} </div>
+            </div>
+             
+          </div>
+           <div class="form-group">
+            <label  class="col-sm-2 control-label">排序</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control"  name="sortrank" value="0">
+            </div>
+            <div class="col-sm-8"> 数字越大越靠前 </div>
+          </div>
+          <div class="form-group" {if $isson==true} style="display: none" {/if}>
+            <label  class="col-sm-2 control-label">分类图标在导航栏显示</label>
+            <div class="col-sm-7">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" checked="checked"  name="isshow_nav"  />
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group cateShow " id="myisshow" {if $isson==true} style="display: none" {/if} >
+            <label  class="col-sm-2 control-label">在首页展示具体分类内容</label>
+            <div class="col-sm-2">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" checked="checked"  name="isshow"  class="show_content" />
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-4">
+                单页面内容暂时不支持在首页显示
+            </div>
+          </div>
+          <div class="form-group cateShow show_content_detail" {if $isson==true} style="display: none" {/if} id="show_num">
+            <label  class="col-sm-2 control-label">在首页展示的条数</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control"  name="show_num" value="4">
+            </div>
+            <div class="col-sm-8"> 该分类下的内容在首页公告栏下方展示的数量，默认是4条 </div>
+          </div>
+          
+          <div class="form-group cateShow show_content_detail" id="myisshow" {if $isson==true} style="display: none" {/if}>
+            <label  class="col-sm-2 control-label">显示分类栏</label>
+            <div class="col-sm-2">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" checked="checked"  name="hide_navbar"  />
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-7"> 不打勾将会隐藏分类栏-><img src="{$imgurl}navbar.png" style="width: 320px;"> </div>
+          </div>
+
+
+          <div class="form-group  show_content_detail show_diynav_div" id="myisshow" {if $isson==true} style="display: none" {/if}>
+            <label  class="col-sm-2 control-label">自定义分类栏</label>
+            <div class="col-sm-2">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"  name="show_diynav"  class="show_diynav" />
+                </label>
+              </div>
+            </div>
+             <div class="col-sm-7"> [全局样式]->[首页分类修饰样式]提供的四种样式不能满足需求时，可以自己设计分类栏样式图片，宽度为375px，高度自定义</div>
+          </div>
+          <div class="form-group  show_content_detail diy_nav_detail" id="myisshow" style="display: none">
+            <label  class="col-sm-3 control-label">分类栏图片</label>
+            <div class="col-sm-3">
+            {php echo tpl_form_field_image('nav_thumb');} 
+            </div>
+            <label  class="col-sm-2 control-label">分类栏图片高度</label>
+             <div class="col-sm-3">
+            <input type="text" class="form-control"  name="nav_height" value="0">
+            </div>
+          </div>
+
+
+        </div>
+        <div class="tab-pane fade" id="ios">
+         
+
+          <div id="comment_div" {if $isson==true} style="display: none" {/if}>
+	          <!--<div class="form-group" id="myisshow" >-->
+	            <!--<label  class="col-sm-3 control-label">开启该分类下的文章评论功能</label>-->
+	            <!--<div class="col-sm-2">-->
+	              <!--<div class="checkbox">-->
+	                <!--<label>-->
+	                  <!--<input type="checkbox" checked="checked"  name="close_comment"  />-->
+	                <!--</label>-->
+	              <!--</div>-->
+	            <!--</div>-->
+	          <!--</div>-->
+	          <div class="form-group" id="myisshow" >
+	            <label  class="col-sm-3 control-label">显示该分类下的文章阅读数</label>
+	            <div class="col-sm-2">
+	              <div class="checkbox">
+	                <label>
+	                  <input type="checkbox" checked="checked"  name="hide_read"  id="hide_read" />
+	                </label>
+	              </div>
+	            </div>
+	          </div>
+            <div class="form-group" id="myisshow" >
+              <label  class="col-sm-3 control-label">开启该分类下的文章点赞功能</label>
+              <div class="col-sm-2">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" checked="checked"  name="hide_vote"  id="hide_vote" />
+                  </label>
+                </div>
+              </div>
+            </div>
+      	  </div>
+
+          <div id="read_div" {if $isson==true} style="display: none" {/if}>
+	          <div class="alert alert-info"  role="alert"> 添加该分类下文章时，会自动从下限和上限之间生成一个随机阅读数。比如下限为200上限为300就是200-300之间产生一个整数。如果不想用，都填写0即可。 </div>
+	          <div class="form-group" >
+	            <label  class="col-sm-1 control-label">下限：</label>
+	            <div class="col-sm-1">
+	              <input type="text" class="form-control"  name="read_downlimit" value="0" style="width: 80px;">
+	            </div>
+	            <label  class="col-sm-1 control-label">上限：</label>
+	            <div class="col-sm-1">
+	              <input type="text" class="form-control"  name="read_uplimit" value="0" style="width: 80px;">
+	            </div>
+	          </div>
+      	  </div>
+
+          <div id="vote_div" {if $isson==true} style="display: none" {/if}>
+            <div class="alert alert-info"  role="alert"> 添加该分类下文章时，会自动从下限和上限之间生成一个随机点赞数。比如下限为200上限为300就是200-300之间产生一个整数。如果不想用，都填写0即可。 </div>
+            <div class="form-group" >
+              <label  class="col-sm-1 control-label">下限：</label>
+              <div class="col-sm-1">
+                <input type="text" class="form-control"  name="vote_downlimit" value="0" style="width: 80px;">
+              </div>
+              <label  class="col-sm-1 control-label">上限：</label>
+              <div class="col-sm-1">
+                <input type="text" class="form-control"  name="vote_uplimit" value="0" style="width: 80px;">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" name="submit" class="btn btn-default">
+          </div>
+        </div>
+      </div>
+    </form>
+    {$page} </div>
+</div>
+<script type="text/javascript">
+  $(function(){
+    $('#myselect').change(function(){
+      var value=$(this).children('option:selected').val();
+     if(value==3 || value==8){
+        $('#show_num').hide();
+        if(value==3){
+          $('#mycontent').show();
+        }
+        if(value==8){
+          $('.cateShow').hide();
+           $('#cateurl').show();
+            $('.show_diynav_div').hide();
+            $('.diy_nav_detail').hide();
+        }else{
+          $('.show_diynav_div').show();
+          $('.cateShow').show();
+          $('#show_num').hide();
+          $('#cateurl').hide();
+        }
+      }else{
+        $('#mycontent').hide();
+        $('.cateShow').show();
+         $('#cateurl').hide();
+          $('.show_diynav_div').show();
+      }
+      if(value=='3' || value=='6' || value=='7' || value=='8'){
+        $('#read_div').hide();
+        $('#comment_div').hide();
+        $('#vote_div').hide();
+      }else{
+        $('#comment_div').show();
+       $('#read_div').show();
+        $('#vote_div').show();
+      }
+
+      if(value=='1'){
+        $('#show_cate1_thumb_height').show();
+      }else{
+        $('#show_cate1_thumb_height').hide();
+      }
+      if(value=='9'){
+        $('#show_cate9_thumb_height').show();
+      }else{
+        $('#show_cate9_thumb_height').hide();
+      }   
+      
+    })
+    //在首页显示具体内容开关
+    $('.show_content').click(function(){
+      if($('.show_content').prop('checked')){
+        $('.show_content_detail').show();
+        var value=$('#myselect').children('option:selected').val();
+        if(value=='3'){
+          $('#show_num').hide();
+        }
+      }else{
+        $('.show_content_detail').hide();
+      }
+    })
+
+
+    //自定义分类条开关
+    $('.show_diynav').click(function(){
+      if($('.show_diynav').prop('checked')){
+        $('.diy_nav_detail').show();
+      }else{
+        $('.diy_nav_detail').hide();
+      }
+    })
+    //阅读数控制
+    $('#hide_read').click(function(){
+    	if($('#hide_read').prop('checked')){
+    		$('#read_div').show();
+    	}else{
+    		$('#read_div').hide();
+    	}
+    })
+    //点赞数控制
+    $('#hide_vote').click(function(){
+      if($('#hide_vote').prop('checked')){
+        $('#vote_div').show();
+      }else{
+        $('#vote_div').hide();
+      }
+    })
+
+  })
+</script> 
+{template 'common/footer'}
