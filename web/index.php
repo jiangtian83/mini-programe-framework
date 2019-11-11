@@ -95,7 +95,7 @@ if (!in_array($action, $actions)) {
 }
 
 if (is_array($acl[$controller]['direct']) && in_array($action, $acl[$controller]['direct'])) {
-		require _forward($controller, $action);
+	require _forward($controller, $action);
 	exit();
 }
 checklogin();

@@ -133,7 +133,7 @@ class Loader {
 				if(is_file($file_path)) {
 					include $file_path;
 				}
-								$file_path = $path . 'Core/' .  implode('', $group) . '.php';
+				$file_path = $path . 'Core/' .  implode('', $group) . '.php';
 				if(is_file($file_path)) {
 					include $file_path;
 				}
@@ -143,7 +143,6 @@ class Loader {
 	// 魔术调用方法，加载文件 vs 缓存加载状态
 	public function __call($type, $params) {
 		global $_W;
-		echo json_encode($params);
 		$name = $cachekey = array_shift($params);
 		// 检测加载，已加载返回true
 		if (!empty($this->cache[$type]) && isset($this->cache[$type][$cachekey])) {
@@ -154,7 +153,7 @@ class Loader {
 			return true;
 		}
 		// 扩展库
-        if ($type == 'library' && !empty($this->libraryMap[$name])) {
+        	if ($type == 'library' && !empty($this->libraryMap[$name])) {
 			$name = $this->libraryMap[$name];
 		}
 		// 账号相关类
