@@ -1,32 +1,38 @@
 <?php
 
+define('IN_IA', true); // 标示是否bootstap
 define('IN_IA', true);
 define('STARTTIME', microtime());
 define('IA_ROOT', str_replace("\\", '/', dirname(dirname(__FILE__))));
 define('MAGIC_QUOTES_GPC', (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) || @ini_get('magic_quotes_sybase'));
 define('TIMESTAMP', time());
 
+// $_GPC变量存储的是经过转义，安全过滤的请求或cookie变量等
+// $_W存储的过程中赋值的配置数据，是系统$config的拷贝
 $_W = $_GPC = array();
 $configfile = IA_ROOT . "/data/config.php";
 
+// 检测配置文件，不存在则需要安装
 if(!file_exists($configfile)) {
 	if(file_exists(IA_ROOT . '/install.php')) {
 		header('Content-Type: text/html; charset=utf-8');
 		require IA_ROOT . '/framework/version.inc.php';
 		echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
 		echo "·如果你还没安装本程序，请运行<a href='".(strpos($_SERVER['SCRIPT_NAME'], 'web') === false ? './install.php' : '../install.php')."'> install.php 进入安装&gt;&gt; </a><br/><br/>";
-		echo "&nbsp;&nbsp;<a href='http://www.we7.cc' style='font-size:12px' target='_blank'>Power by WE7 " . IMS_VERSION . " &nbsp;微擎公众平台自助开源引擎</a>";
 		exit();
 	} else {
 		header('Content-Type: text/html; charset=utf-8');
-		exit('配置文件不存在或是不可读，请检查“data/config”文件或是重新安装！');
+		exit('配置文件及安装文件' . (strpos($_SERVER['SCRIPT_NAME'], 'web') === false ? './install.php' : '../install.php') . '都不u 存在，请检查“data/config”文件及安装文件！');
 	}
 }
 
+// 引入配置文件
 require $configfile;
 require IA_ROOT . '/framework/version.inc.php';
 require IA_ROOT . '/framework/const.inc.php';
-require IA_ROOT . '/framework/class/loader.class.php';
+require IA_ROOT . '/framework/class/loader.class.php'; // 生成loader自动加载
+
+// func加载的是函数，classs加载的是类，model加载的模型，libary加载库
 load()->func('global');
 load()->func('compat');
 load()->func('pdo');
@@ -39,53 +45,56 @@ load()->library('agent');
 load()->classs('db');
 load()->func('communication');
 
-
-
-
 define('CLIENT_IP', getip());
 
-$_W['config'] = $config;
-$_W['config']['db']['tablepre'] = !empty($_W['config']['db']['master']['tablepre']) ? $_W['config']['db']['master']['tablepre'] : $_W['config']['db']['tablepre'];
+$_W['config'] = $config; // 引入的配置项
+$_W['config']['db']['tablepre'] = !empty($_W['config']['db']['master']['tablepre']) ? $_W['config']['db']['master']['tablepre'] : $_W['config']['db']['tablepre']; // 数据表前缀
+
 $_W['timestamp'] = TIMESTAMP;
 $_W['charset'] = $_W['config']['setting']['charset'];
 $_W['clientip'] = CLIENT_IP;
 
 unset($configfile, $config);
 
-
+// 附件基目录
 define('ATTACHMENT_ROOT', IA_ROOT .'/attachment/');
 error_reporting(0);
-
 
 if(!in_array($_W['config']['setting']['cache'], array('mysql', 'memcache', 'redis'))) {
 	$_W['config']['setting']['cache'] = 'mysql';
 }
 load()->func('cache');
 
+// 设置系统时区
 if(function_exists('date_default_timezone_set')) {
 	date_default_timezone_set($_W['config']['setting']['timezone']);
 }
+// 设置系统内存使用
 if(!empty($_W['config']['setting']['memory_limit']) && function_exists('ini_get') && function_exists('ini_set')) {
 	if(@ini_get('memory_limit') != $_W['config']['setting']['memory_limit']) {
 		@ini_set('memory_limit', $_W['config']['setting']['memory_limit']);
 	}
 }
-
+// 协议是否https
 if (isset($_W['config']['setting']['https']) && $_W['config']['setting']['https'] == '1') {
 	$_W['ishttps'] = $_W['config']['setting']['https'];
 } else {
 	$_W['ishttps'] = $_SERVER['SERVER_PORT'] == 443 ||
 	(isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) != 'off') ||
 	strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) == 'https' ||
-	strtolower($_SERVER['HTTP_X_CLIENT_SCHEME']) == 'https' 			? true : false;
+	strtolower($_SERVER['HTTP_X_CLIENT_SCHEME']) == 'https' ? true : false;
 }
-
+// 是否ajax
 $_W['isajax'] = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
+// 是否post
 $_W['ispost'] = $_SERVER['REQUEST_METHOD'] == 'POST';
-
+// 协议头
 $_W['sitescheme'] = $_W['ishttps'] ? 'https://' : 'http://';
+// 脚本名
 $_W['script_name'] = htmlspecialchars(scriptname());
+// 脚本相对路径
 $sitepath = substr($_SERVER['PHP_SELF'], 0, strrpos($_SERVER['PHP_SELF'], '/'));
+// 完整脚本路径
 $_W['siteroot'] = htmlspecialchars($_W['sitescheme'] . $_SERVER['HTTP_HOST'] . $sitepath);
 
 if(substr($_W['siteroot'], -1) != '/') {
@@ -95,6 +104,7 @@ $urls = parse_url($_W['siteroot']);
 $urls['path'] = str_replace(array('/web', '/app', '/payment/wechat', '/payment/alipay', '/payment/jueqiymf', '/api'), '', $urls['path']);
 $_W['siteroot'] = $urls['scheme'].'://'.$urls['host'].((!empty($urls['port']) && $urls['port']!='80') ? ':'.$urls['port'] : '').$urls['path'];
 
+// 处理接受的参数，去反斜杠
 if(MAGIC_QUOTES_GPC) {
 	$_GET = istripslashes($_GET);
 	$_POST = istripslashes($_POST);
@@ -114,11 +124,14 @@ foreach($_COOKIE as $key => $value) {
 }
 unset($cplen, $key, $value);
 
+// 合并接受到的参数并转为html实体
 $_GPC = array_merge($_GPC, $_POST);
 $_GPC = ihtmlspecialchars($_GPC);
 
+// 拼接访问url
 $_W['siteurl'] = $urls['scheme'].'://'.$urls['host'].((!empty($urls['port']) && $urls['port']!='80') ? ':'.$urls['port'] : '') . $_W['script_name'] . '?' . http_build_query($_GET, '', '&');
 
+// 非ajax请求，从php://input获取值
 if (!$_W['isajax']) {
 	$input = file_get_contents("php://input");
 	if (!empty($input)) {
@@ -133,9 +146,11 @@ if (!$_W['isajax']) {
 
 setting_load();
 if (empty($_W['setting']['upload'])) {
+    // 仅向 array_merge() 函数输入一个数组，且键名是整数，则该函数将返回带有整数键名的新数组，其键名以 0 开始进行重新索引
 	$_W['setting']['upload'] = array_merge($_W['config']['upload']);
 }
 
+// 定义开发环境常量
 define('DEVELOPMENT', $_W['setting']['copyright']['develop_status'] == 1 || $_W['config']['setting']['development'] == 1);
 if(DEVELOPMENT) {
 	ini_set('display_errors', '1');

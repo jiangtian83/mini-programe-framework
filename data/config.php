@@ -4,13 +4,13 @@ defined('IN_IA') or exit('Access Denied');
 $config = array();
 
 $config['db']['master']['host'] = '127.0.0.1';
-$config['db']['master']['username'] = 'baidu_zhimanfen';
-$config['db']['master']['password'] = 'bskBmCdc6c8zmsRT';
+$config['db']['master']['username'] = 'baidu_zhimanfen_';
+$config['db']['master']['password'] = 'WZdyyiz7WBFeBZzn';
 $config['db']['master']['port'] = '3306';
-$config['db']['master']['database'] = 'baidu_zhimanfen';
+$config['db']['master']['database'] = 'baidu_zhimanfen_';
 $config['db']['master']['charset'] = 'utf8';
 $config['db']['master']['pconnect'] = 0;
-$config['db']['master']['tablepre'] = 'zx_';
+$config['db']['master']['tablepre'] = 'ims_';
 
 $config['db']['slave_status'] = false;
 $config['db']['slave']['1']['host'] = '';
@@ -26,7 +26,7 @@ $config['db']['slave']['1']['weight'] = 0;
 $config['db']['common']['slave_except_table'] = array('core_sessions');
 
 // --------------------------  CONFIG COOKIE  --------------------------- //
-$config['cookie']['pre'] = 'add1_';
+$config['cookie']['pre'] = '5539_';
 $config['cookie']['domain'] = '';
 $config['cookie']['path'] = '/';
 
@@ -36,7 +36,7 @@ $config['setting']['cache'] = 'mysql';
 $config['setting']['timezone'] = 'Asia/Shanghai';
 $config['setting']['memory_limit'] = '256M';
 $config['setting']['filemode'] = 0644;
-$config['setting']['authkey'] = '8543e938';
+$config['setting']['authkey'] = 'b7535c8a';
 $config['setting']['founder'] = '1';
 $config['setting']['development'] = 0;
 $config['setting']['referrer'] = 0;

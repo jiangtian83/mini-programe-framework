@@ -5,6 +5,9 @@
 defined('IN_IA') or exit('Access Denied');
 
 
+/**
+ * return Loader
+ */
 function load() {
 	static $loader;
 	if(empty($loader)) {
@@ -60,7 +63,9 @@ function table($name) {
 	return $service;
 }
 
-
+/**
+ * Class Loader
+ */
 class Loader {
 
 	private $cache = array();
@@ -111,7 +116,7 @@ class Loader {
 
 	public function registerAutoload() {
 		spl_autoload_register(array($this, 'autoload'));
-			}
+    }
 
 	public function autoload($class) {
 		$section = array(
@@ -179,7 +184,6 @@ class Loader {
 		$this->singletonObject[$name] = $this->object($name);
 		return $this->singletonObject[$name];
 	}
-
 	
 	function object($name) {
 		$this->classs(strtolower($name));

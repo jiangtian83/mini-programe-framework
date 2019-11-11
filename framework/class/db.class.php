@@ -1,7 +1,6 @@
 <?php
 /**
- * [WeEngine System] Copyright (c) 2014 WE7.CC
- * WeEngine is NOT a free software, it under the license terms, visited http://www.we7.cc/ for more details.
+ * [zhixue-inc System] Copyright (c) 2019 zhimanfen.com
  */
 defined('IN_IA') or exit('Access Denied');
 define('PDO_DEBUG', true);

@@ -1,6 +1,6 @@
 <?php
 /**
- * [zixun-inc System] Copyright (c) 2019 zhimanfen.com
+ * [zhixue-inc System] Copyright (c) 2019 zhimanfen.com
  */
 defined('IN_IA') or exit('Access Denied');
 
