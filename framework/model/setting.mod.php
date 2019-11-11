@@ -28,9 +28,7 @@ function setting_load($key = '') {
 	global $_W;
 
 	$cachekey = cache_system_key('setting');
-	echo 9;
 	$settings = cache_load($cachekey);
-	echo 0;
 	if (empty($settings)) {
 		$settings = pdo_fetchall('SELECT * FROM ' . tablename('core_settings'), array(), 'key');
 		if (is_array($settings)) {
@@ -40,7 +38,6 @@ function setting_load($key = '') {
 		}
 		cache_write($cachekey, $settings);
 	}
-	echo 1;die;
 	if (!is_array($_W['setting'])) {
 		$_W['setting'] = array();
 	}
