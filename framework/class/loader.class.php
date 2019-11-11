@@ -138,7 +138,7 @@ class Loader {
 				if(is_file($file_path)) {
 					include $file_path;
 				}
-								$file_path = $path . 'Core/' .  implode('', $group) . '.php';
+				$file_path = $path . 'Core/' .  implode('', $group) . '.php';
 				if(is_file($file_path)) {
 					include $file_path;
 				}
@@ -158,7 +158,7 @@ class Loader {
 			return true;
 		}
 		// 扩展库
-        if ($type == 'library' && !empty($this->libraryMap[$name])) {
+        	if ($type == 'library' && !empty($this->libraryMap[$name])) {
 			$name = $this->libraryMap[$name];
 		}
 		// 账号相关类
