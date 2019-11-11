@@ -47,6 +47,7 @@ load()->func('communication');
 define('CLIENT_IP', getip());
 
 $_W['config'] = $config; // 引入的配置项
+echo json_encode($config);die;
 $_W['config']['db']['tablepre'] = !empty($_W['config']['db']['master']['tablepre']) ? $_W['config']['db']['master']['tablepre'] : $_W['config']['db']['tablepre']; // 数据表前缀
 
 $_W['timestamp'] = TIMESTAMP;
