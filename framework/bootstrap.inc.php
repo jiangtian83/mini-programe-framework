@@ -47,8 +47,9 @@ load()->func('communication');
 define('CLIENT_IP', getip());
 
 $_W['config'] = $config; // 引入的配置项
-echo json_encode($config);die;
-$_W['config']['db']['tablepre'] = !empty($_W['config']['db']['master']['tablepre']) ? $_W['config']['db']['master']['tablepre'] : $_W['config']['db']['tablepre']; // 数据表前缀
+$_W['config']['db']['tablepre'] = !empty($_W['config']['db']['master']['tablepre'])
+    ? $_W['config']['db']['master']['tablepre']
+    : $_W['config']['db']['tablepre']; // 数据表前缀
 
 $_W['timestamp'] = TIMESTAMP;
 $_W['charset'] = $_W['config']['setting']['charset'];
@@ -123,7 +124,7 @@ foreach($_COOKIE as $key => $value) {
 	}
 }
 unset($cplen, $key, $value);
-
+echo 9999;die;
 // 合并接受到的参数并转为html实体
 $_GPC = array_merge($_GPC, $_POST);
 $_GPC = ihtmlspecialchars($_GPC);
