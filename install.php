@@ -204,10 +204,7 @@ if($action == 'db') {
 		}
 		$family = $_POST['family'] == 'x' ? 'x' : 'v';
 		$db = $_POST['db'];
-<<<<<<< HEAD
-=======
 	 	//echo json_encode($_POST);exit;
->>>>>>> c4fb0c5d9411b77b6b482e20e82057ca056d4fbd
 		$user = $_POST['user'];
 		try {
 			$pieces = explode(':', $db['server']);
@@ -308,11 +305,7 @@ if($action == 'db') {
 					local_run($data);
 				}
 			} else {
-<<<<<<< HEAD
-				die('<script type="text/javascript">alert("你正在使用本地安装, 但未下载完整安装包, 请从微擎官网下载完整安装包后重试.");history.back();</script>');
-=======
 				die('<script type="text/javascript">alert("你正在使用本地安装, 但未下载完整安装包, 请从官网下载完整安装包后重试.");history.back();</script>');
->>>>>>> c4fb0c5d9411b77b6b482e20e82057ca056d4fbd
 			}
 
 			$salt = local_salt(8);
