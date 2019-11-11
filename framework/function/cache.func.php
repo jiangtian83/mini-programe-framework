@@ -40,8 +40,8 @@ function cache_load($key, $unserialize = false) {
 	if (!empty($we7_cache[$key])) {
 		return $we7_cache[$key];
 	}
-	echo 9;die;
 	$data = $we7_cache[$key] = cache_read($key);
+	echo 0;die;
 	if ($key == 'setting') {
 		$_W['setting'] = $data;
 		return $_W['setting'];
