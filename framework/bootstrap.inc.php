@@ -142,8 +142,8 @@ if (!$_W['isajax']) {
 	}
 	unset($input, $__input);
 }
-echo 9999;die;
 setting_load();
+echo 99999;die;
 if (empty($_W['setting']['upload'])) {
     // 仅向 array_merge() 函数输入一个数组，且键名是整数，则该函数将返回带有整数键名的新数组，其键名以 0 开始进行重新索引
 	$_W['setting']['upload'] = array_merge($_W['config']['upload']);
