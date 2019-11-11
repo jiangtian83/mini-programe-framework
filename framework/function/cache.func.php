@@ -33,7 +33,6 @@ function cache_type() {
 function cache_load($key, $unserialize = false) {
 	global $_W;
 	static $we7_cache;
-    echo 0;
 	if (is_error($key)) {
 		trigger_error($key['message'], E_USER_WARNING);
 		return false;
@@ -41,8 +40,8 @@ function cache_load($key, $unserialize = false) {
 	if (!empty($we7_cache[$key])) {
 		return $we7_cache[$key];
 	}
+	echo 9;die;
 	$data = $we7_cache[$key] = cache_read($key);
-	echo 1;die;
 	if ($key == 'setting') {
 		$_W['setting'] = $data;
 		return $_W['setting'];
