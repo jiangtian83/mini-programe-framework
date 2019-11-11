@@ -6,6 +6,8 @@ define('IA_ROOT', str_replace("\\", '/', dirname(dirname(__FILE__))));
 define('MAGIC_QUOTES_GPC', (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) || @ini_get('magic_quotes_sybase'));
 define('TIMESTAMP', time());
 
+// $_GPC变量存储的是经过转义，安全过滤的请求或cookie变量等
+// $_W存储的过程中赋值的配置数据，是系统$config的拷贝
 $_W = $_GPC = array();
 $configfile = IA_ROOT . "/data/config.php";
 
@@ -61,30 +63,36 @@ if(!in_array($_W['config']['setting']['cache'], array('mysql', 'memcache', 'redi
 }
 load()->func('cache');
 
+// 设置系统时区
 if(function_exists('date_default_timezone_set')) {
 	date_default_timezone_set($_W['config']['setting']['timezone']);
 }
+// 设置系统内存使用
 if(!empty($_W['config']['setting']['memory_limit']) && function_exists('ini_get') && function_exists('ini_set')) {
 	if(@ini_get('memory_limit') != $_W['config']['setting']['memory_limit']) {
 		@ini_set('memory_limit', $_W['config']['setting']['memory_limit']);
 	}
 }
-
+// 协议是否https
 if (isset($_W['config']['setting']['https']) && $_W['config']['setting']['https'] == '1') {
 	$_W['ishttps'] = $_W['config']['setting']['https'];
 } else {
 	$_W['ishttps'] = $_SERVER['SERVER_PORT'] == 443 ||
 	(isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) != 'off') ||
 	strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) == 'https' ||
-	strtolower($_SERVER['HTTP_X_CLIENT_SCHEME']) == 'https' 			? true : false;
+	strtolower($_SERVER['HTTP_X_CLIENT_SCHEME']) == 'https' ? true : false;
 }
-
+// 是否ajax
 $_W['isajax'] = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
+// 是否post
 $_W['ispost'] = $_SERVER['REQUEST_METHOD'] == 'POST';
-
+// 协议头
 $_W['sitescheme'] = $_W['ishttps'] ? 'https://' : 'http://';
+// 脚本名
 $_W['script_name'] = htmlspecialchars(scriptname());
+// 脚本相对路径
 $sitepath = substr($_SERVER['PHP_SELF'], 0, strrpos($_SERVER['PHP_SELF'], '/'));
+// 完整脚本路径
 $_W['siteroot'] = htmlspecialchars($_W['sitescheme'] . $_SERVER['HTTP_HOST'] . $sitepath);
 
 if(substr($_W['siteroot'], -1) != '/') {
@@ -94,6 +102,7 @@ $urls = parse_url($_W['siteroot']);
 $urls['path'] = str_replace(array('/web', '/app', '/payment/wechat', '/payment/alipay', '/payment/jueqiymf', '/api'), '', $urls['path']);
 $_W['siteroot'] = $urls['scheme'].'://'.$urls['host'].((!empty($urls['port']) && $urls['port']!='80') ? ':'.$urls['port'] : '').$urls['path'];
 
+// 处理接受的参数，去反斜杠
 if(MAGIC_QUOTES_GPC) {
 	$_GET = istripslashes($_GET);
 	$_POST = istripslashes($_POST);
@@ -113,11 +122,14 @@ foreach($_COOKIE as $key => $value) {
 }
 unset($cplen, $key, $value);
 
+// 合并接受到的参数并转为html实体
 $_GPC = array_merge($_GPC, $_POST);
 $_GPC = ihtmlspecialchars($_GPC);
 
+// 拼接访问url
 $_W['siteurl'] = $urls['scheme'].'://'.$urls['host'].((!empty($urls['port']) && $urls['port']!='80') ? ':'.$urls['port'] : '') . $_W['script_name'] . '?' . http_build_query($_GET, '', '&');
 
+// 非ajax请求，从php://input获取值
 if (!$_W['isajax']) {
 	$input = file_get_contents("php://input");
 	if (!empty($input)) {
@@ -132,9 +144,11 @@ if (!$_W['isajax']) {
 
 setting_load();
 if (empty($_W['setting']['upload'])) {
+    // 仅向 array_merge() 函数输入一个数组，且键名是整数，则该函数将返回带有整数键名的新数组，其键名以 0 开始进行重新索引
 	$_W['setting']['upload'] = array_merge($_W['config']['upload']);
 }
 
+// 定义开发环境常量
 define('DEVELOPMENT', $_W['setting']['copyright']['develop_status'] == 1 || $_W['config']['setting']['development'] == 1);
 if(DEVELOPMENT) {
 	ini_set('display_errors', '1');

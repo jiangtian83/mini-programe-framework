@@ -23,7 +23,7 @@ function ver_compare($version1, $version2) {
 	return version_compare($version1, $version2);
 }
 
-
+// 删除反斜杠处理
 function istripslashes($var) {
 	if (is_array($var)) {
 		foreach ($var as $key => $value) {
@@ -35,7 +35,7 @@ function istripslashes($var) {
 	return $var;
 }
 
-
+// 将特殊字符转换为HTML实体
 function ihtmlspecialchars($var) {
 	if (is_array($var)) {
 		foreach ($var as $key => $value) {
