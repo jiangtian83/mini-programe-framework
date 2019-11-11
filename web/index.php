@@ -2,6 +2,7 @@
 
 define('IN_SYS', true);
 require '../framework/bootstrap.inc.php';
+echo 9;
 require IA_ROOT . '/web/common/bootstrap.sys.inc.php';
 
 if (!empty($_GPC['state'])) {
