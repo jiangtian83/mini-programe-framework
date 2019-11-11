@@ -24,7 +24,6 @@ function setting_save($data = '', $key = '') {
 	return $return;
 }
 
-
 function setting_load($key = '') {
 	global $_W;
 
