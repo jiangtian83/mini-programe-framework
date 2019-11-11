@@ -130,7 +130,7 @@ $_GPC = ihtmlspecialchars($_GPC);
 
 // 拼接访问url
 $_W['siteurl'] = $urls['scheme'].'://'.$urls['host'].((!empty($urls['port']) && $urls['port']!='80') ? ':'.$urls['port'] : '') . $_W['script_name'] . '?' . http_build_query($_GET, '', '&');
-
+echo 8888;die;
 // 非ajax请求，从php://input获取值
 if (!$_W['isajax']) {
 	$input = file_get_contents("php://input");
@@ -149,7 +149,6 @@ if (empty($_W['setting']['upload'])) {
     // 仅向 array_merge() 函数输入一个数组，且键名是整数，则该函数将返回带有整数键名的新数组，其键名以 0 开始进行重新索引
 	$_W['setting']['upload'] = array_merge($_W['config']['upload']);
 }
-echo 9999;die;
 // 定义开发环境常量
 define('DEVELOPMENT', $_W['setting']['copyright']['develop_status'] == 1 || $_W['config']['setting']['development'] == 1);
 if(DEVELOPMENT) {
