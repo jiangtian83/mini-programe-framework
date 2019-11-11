@@ -70,8 +70,7 @@ if ($do == 'system') {
 }
 if ($do =='get_module_statistics') {
 	$install_modules = module_installed_list();
-	
-        $module_statistics = array(
+	$module_statistics = array(
 		'account' => array(
 			'total' => array(
 				'uninstall' => module_uninstall_total('account'),

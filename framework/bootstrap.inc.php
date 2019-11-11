@@ -1,6 +1,7 @@
 <?php
 
 define('IN_IA', true); // 标示是否bootstap
+define('IN_IA', true);
 define('STARTTIME', microtime());
 define('IA_ROOT', str_replace("\\", '/', dirname(dirname(__FILE__))));
 define('MAGIC_QUOTES_GPC', (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) || @ini_get('magic_quotes_sybase'));
@@ -48,6 +49,7 @@ define('CLIENT_IP', getip());
 
 $_W['config'] = $config; // 引入的配置项
 $_W['config']['db']['tablepre'] = !empty($_W['config']['db']['master']['tablepre']) ? $_W['config']['db']['master']['tablepre'] : $_W['config']['db']['tablepre']; // 数据表前缀
+
 $_W['timestamp'] = TIMESTAMP;
 $_W['charset'] = $_W['config']['setting']['charset'];
 $_W['clientip'] = CLIENT_IP;
