@@ -124,7 +124,6 @@ foreach($_COOKIE as $key => $value) {
 	}
 }
 unset($cplen, $key, $value);
-echo 9999;die;
 // 合并接受到的参数并转为html实体
 $_GPC = array_merge($_GPC, $_POST);
 $_GPC = ihtmlspecialchars($_GPC);
@@ -150,7 +149,7 @@ if (empty($_W['setting']['upload'])) {
     // 仅向 array_merge() 函数输入一个数组，且键名是整数，则该函数将返回带有整数键名的新数组，其键名以 0 开始进行重新索引
 	$_W['setting']['upload'] = array_merge($_W['config']['upload']);
 }
-
+echo 9999;
 // 定义开发环境常量
 define('DEVELOPMENT', $_W['setting']['copyright']['develop_status'] == 1 || $_W['config']['setting']['development'] == 1);
 if(DEVELOPMENT) {
