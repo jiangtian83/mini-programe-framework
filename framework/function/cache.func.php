@@ -40,8 +40,11 @@ function cache_load($key, $unserialize = false) {
 	if (!empty($we7_cache[$key])) {
 		return $we7_cache[$key];
 	}
-	$data = $we7_cache[$key] = cache_read($key);
-	echo 0;die;
+	try {
+        $data = $we7_cache[$key] = cache_read($key);
+    } catch (Exception $e) {
+	    echo json_encode($e->getMessage());die;
+    }
 	if ($key == 'setting') {
 		$_W['setting'] = $data;
 		return $_W['setting'];
