@@ -43,7 +43,7 @@ function cache_load($key, $unserialize = false) {
 	try {
         $data = $we7_cache[$key] = cache_read($key);
     } catch (Exception $e) {
-	    echo json_encode($e->getMessage());die;
+	    echo json_encode($e->getMessage());
     }
 	if ($key == 'setting') {
 		$_W['setting'] = $data;
