@@ -155,7 +155,6 @@ class Loader {
 		}
 		// 检测到不在加载配置中
 		if (empty($this->loadTypeMap[$type])) {
-		    echo $type;
 			return true;
 		}
 		// 扩展库
@@ -168,7 +167,6 @@ class Loader {
 		}
 		// 占位符替换
 		$file = sprintf($this->loadTypeMap[$type], $name);
-		echo $file;
 		if (file_exists(IA_ROOT . $file)) {
 			include IA_ROOT . $file; // 加载类文件
 			$this->cache[$type][$cachekey] = true;

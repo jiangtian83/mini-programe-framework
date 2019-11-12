@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="eb486dca-b59e-4ca5-9483-f11ad8bec115" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/common/template.func.php" afterPath="$PROJECT_DIR$/app/common/template.func.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/class/loader.class.php" afterPath="$PROJECT_DIR$/framework/class/loader.class.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +29,8 @@
       <file leaf-file-name="bootstrap.sys.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/common/bootstrap.sys.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+            <state relative-caret-position="105">
+              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -38,42 +39,25 @@
       <file leaf-file-name="loader.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/framework/class/loader.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="170" column="19" lean-forward="false" selection-start-line="170" selection-start-column="19" selection-end-line="170" selection-end-column="19" />
+            <state relative-caret-position="329">
+              <caret line="156" column="47" lean-forward="false" selection-start-line="156" selection-start-column="47" selection-end-line="156" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="global.func.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/function/global.func.php">
+      <file leaf-file-name="common.func.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/common/common.func.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="101" column="40" lean-forward="true" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
+            <state relative-caret-position="15">
+              <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
               <folding>
-                <marker date="1573462883000" expanded="true" signature="12353:12360" ph="«" />
-                <marker date="1573462883000" expanded="true" signature="13893:13900" ph="»" />
+                <marker date="1573527630000" expanded="true" signature="946:1265" ph="..." />
+                <marker date="1573527630000" expanded="true" signature="1085:1256" ph="{...}" />
+                <marker date="1573527630000" expanded="true" signature="25880:26263" ph="..." />
+                <marker date="1573527630000" expanded="true" signature="25910:26251" ph="..." />
+                <marker date="1573527630000" expanded="true" signature="25948:26238" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="38" lean-forward="false" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.inc.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/bootstrap.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
-              <caret line="144" column="9" lean-forward="false" selection-start-line="144" selection-start-column="9" selection-end-line="144" selection-end-column="9" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -148,6 +132,7 @@
         <option value="$PROJECT_DIR$/framework/function/global.func.php" />
         <option value="$PROJECT_DIR$/web/common/bootstrap.sys.inc.php" />
         <option value="$PROJECT_DIR$/web/common/common.func.php" />
+        <option value="$PROJECT_DIR$/app/common/template.func.php" />
         <option value="$PROJECT_DIR$/framework/class/loader.class.php" />
       </list>
     </option>
@@ -345,7 +330,7 @@
     <property name="nodejs_interpreter_path" value="/usr/local/Cellar/node/11.1.0/bin/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="common.func&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;common&#9;FILE&#9;file:///Users/jt/app/we7/app/common/common.func.php&#10;config&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;install&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;install.&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;bootstrap.sys.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/web/common/bootstrap.sys.inc.php&#10;addons/yyf_baidu/project.swan.json&#9;FILE&#9;file:///Users/jt/app/we7/addons/yyf_baidu/project.swan.json&#10;data/config.php&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;framework/bootstrap.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/bootstrap.inc.php&#10;framework/class/account.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;framework/class/db.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;framework/class/loader.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;framework/function/cache.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;framework/function/communication.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;framework/function/compat.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;framework/function/global.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/global.func.php&#10;framework/function/pdo.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;framework/library/sentry/Raven/Autoloader.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/sentry/Raven/Autoloader.php&#10;account.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/account.mod.php&#10;module.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php&#10;version.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/version.inc.php&#10;welcome.ctrl.php&#9;FILE&#9;file:///Users/jt/app/we7/web/source/home/welcome.ctrl.php&#10;cache.fu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;agent&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;Raven_Autoloader&#9;null&#9;null&#10;loader&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;commu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;db.c&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;agent.&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;module.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php&#10;account.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/account.mod.php&#10;account&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;cache&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;com&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;pdo.&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;acco&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;account.class&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;pdo.fun&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;compat.func&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;global&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/global.func.php&#10;loader.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;glyphicons-halflings-regular.woff&#9;FILE&#9;file:///Users/jt/app/we7/app/resource/fonts/glyphicons-halflings-regular.woff&#10;Table\Modules\Modules&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="common.&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;template.fun&#9;FILE&#9;file:///Users/jt/app/we7/app/common/template.func.php&#10;common.func&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;common&#9;FILE&#9;file:///Users/jt/app/we7/app/common/common.func.php&#10;config&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;install&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;install.&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;bootstrap.sys.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/web/common/bootstrap.sys.inc.php&#10;addons/yyf_baidu/project.swan.json&#9;FILE&#9;file:///Users/jt/app/we7/addons/yyf_baidu/project.swan.json&#10;data/config.php&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;framework/bootstrap.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/bootstrap.inc.php&#10;framework/class/account.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;framework/class/db.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;framework/class/loader.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;framework/function/cache.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;framework/function/communication.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;framework/function/compat.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;framework/function/global.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/global.func.php&#10;framework/function/pdo.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;framework/library/sentry/Raven/Autoloader.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/sentry/Raven/Autoloader.php&#10;account.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/account.mod.php&#10;module.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php&#10;version.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/version.inc.php&#10;welcome.ctrl.php&#9;FILE&#9;file:///Users/jt/app/we7/web/source/home/welcome.ctrl.php&#10;cache.fu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;agent&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;Raven_Autoloader&#9;null&#9;null&#10;loader&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;commu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;db.c&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;agent.&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;module.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php&#10;account.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/account.mod.php&#10;account&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;cache&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;com&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;pdo.&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;acco&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;account.class&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;pdo.fun&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;compat.func&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;global&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/global.func.php&#10;loader.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;glyphicons-halflings-regular.woff&#9;FILE&#9;file:///Users/jt/app/we7/app/resource/fonts/glyphicons-halflings-regular.woff&#10;Table\Modules\Modules&#9;null&#9;null" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -455,12 +440,12 @@
       <workItem from="1573110564243" duration="4505000" />
       <workItem from="1573198574494" duration="463000" />
       <workItem from="1573350762525" duration="26857000" />
-      <workItem from="1573526764728" duration="1180000" />
+      <workItem from="1573526764728" duration="1597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33005000" />
+    <option name="totallyTimeSpent" value="33422000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -496,13 +481,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/framework/table/Modules/Modules.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/install.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8805">
@@ -829,6 +807,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="100" column="27" lean-forward="false" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1114,19 +1093,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/bootstrap.inc.php">
+    <entry file="file://$PROJECT_DIR$/app/common/common.func.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="144" column="9" lean-forward="false" selection-start-line="144" selection-start-column="9" selection-end-line="144" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="195">
+          <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding>
+            <marker date="1573109659000" expanded="true" signature="3258:3367" ph="SELECT `fani... ${tablename('mc_mapping_fans')}" />
+            <marker date="1573109659000" expanded="true" signature="4775:5640" ph="..." />
+            <marker date="1573109659000" expanded="true" signature="4955:5601" ph="[...]" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/config.php">
+    <entry file="file://$PROJECT_DIR$/app/common/template.func.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="38" lean-forward="false" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="45">
+          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+          <folding>
+            <marker date="1573528444000" expanded="true" signature="471:534" ph="SELECT * FRO... ${tablename('site_page')}" />
+            <marker date="1573528444000" expanded="true" signature="12904:13033" ph="SELECT * FRO... ${tablename('site_article')}" />
+            <marker date="1573528444000" expanded="true" signature="13117:13138" ph="SELECT COUNT... ${tablename('site_article')}" />
+            <marker date="1573528444000" expanded="true" signature="13796:13934" ph="SELECT * FRO... ${tablename('site_category')}" />
+            <marker date="1573528444000" expanded="true" signature="14915:14993" ph="SELECT defau... ${tablename('uni_settings')}" />
+            <marker date="1573528444000" expanded="true" signature="15091:15243" ph="SELECT * FRO... ${tablename('site_slide')}" />
+            <marker date="1573528444000" expanded="true" signature="15874:15943" ph="SELECT * FRO... ${tablename('site_article')}" />
+            <marker date="1573528444000" expanded="true" signature="17079:17187" ph="SELECT html,... ${tablename('site_page')}" />
+            <marker date="1573528444000" expanded="true" signature="17828:17936" ph="SELECT html,... ${tablename('site_page')}" />
+            <marker date="1573528444000" expanded="true" signature="18609:19019" ph="..." />
+            <marker date="1573528444000" expanded="true" signature="18656:19008" ph="{...}" />
+            <marker date="1573528444000" expanded="true" signature="18686:19005" ph="{...}" />
+            <marker date="1573528444000" expanded="true" signature="18781:19001" ph="{...}" />
+            <marker date="1573528444000" expanded="true" signature="18861:18996" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1141,21 +1139,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/common.func.php">
+    <entry file="file://$PROJECT_DIR$/data/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding>
-            <marker date="1573109659000" expanded="true" signature="3258:3367" ph="SELECT `fani... ${tablename('mc_mapping_fans')}" />
-            <marker date="1573109659000" expanded="true" signature="4775:5640" ph="..." />
-            <marker date="1573109659000" expanded="true" signature="4955:5601" ph="[...]" />
-          </folding>
+        <state relative-caret-position="361">
+          <caret line="37" column="38" lean-forward="false" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/bootstrap.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="144" column="9" lean-forward="false" selection-start-line="144" selection-start-column="9" selection-end-line="144" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/common/common.func.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9435">
+        <state relative-caret-position="15">
           <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
           <folding>
             <marker date="1573527630000" expanded="true" signature="946:1265" ph="..." />
@@ -1169,16 +1171,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/common/bootstrap.sys.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        <state relative-caret-position="105">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/framework/class/loader.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="170" column="19" lean-forward="false" selection-start-line="170" selection-start-column="19" selection-end-line="170" selection-end-column="19" />
+        <state relative-caret-position="329">
+          <caret line="156" column="47" lean-forward="false" selection-start-line="156" selection-start-column="47" selection-end-line="156" selection-end-column="47" />
           <folding />
         </state>
       </provider>
