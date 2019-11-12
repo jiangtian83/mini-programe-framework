@@ -78,12 +78,17 @@ function getip() {
 	}
 }
 
-
+/**
+ * 维持session中token
+ * @param string $specialadd 额外混淆字符串
+ * @return bool|string
+ */
 function token($specialadd = '') {
 	global $_W;
 	if(!defined('IN_MOBILE')) {
 		return substr(md5($_W['config']['setting']['authkey'] . $specialadd), 8, 8);
 	} else {
+	    // session中保持只有5个以下的token
 		if(!empty($_SESSION['token'])) {
 			$count  = count($_SESSION['token']) - 5;
 			asort($_SESSION['token']);
@@ -97,10 +102,15 @@ function token($specialadd = '') {
 		$key = substr(random(20), 0, 4);
 		$_SESSION['token'][$key] = TIMESTAMP;
 		return $key;
+
 	}
 }
 
-
+/**
+ * @param $length 
+ * @param bool $numeric
+ * @return string
+ */
 function random($length, $numeric = FALSE) {
 	$seed = base_convert(md5(microtime() . $_SERVER['DOCUMENT_ROOT']), 16, $numeric ? 10 : 35);
 	$seed = $numeric ? (str_replace('0', '', $seed) . '012340567890') : ($seed . 'zZ' . strtoupper($seed));

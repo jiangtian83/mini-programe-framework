@@ -155,6 +155,7 @@ class Loader {
 		}
 		// 检测到不在加载配置中
 		if (empty($this->loadTypeMap[$type])) {
+		    echo $type;
 			return true;
 		}
 		// 扩展库
