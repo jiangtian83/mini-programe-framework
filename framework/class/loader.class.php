@@ -159,7 +159,7 @@ class Loader {
 			return true;
 		}
 		// 扩展库
-        	if ($type == 'library' && !empty($this->libraryMap[$name])) {
+        if ($type == 'library' && !empty($this->libraryMap[$name])) {
 			$name = $this->libraryMap[$name];
 		}
 		// 账号相关类
@@ -168,6 +168,7 @@ class Loader {
 		}
 		// 占位符替换
 		$file = sprintf($this->loadTypeMap[$type], $name);
+		echo $file;
 		if (file_exists(IA_ROOT . $file)) {
 			include IA_ROOT . $file; // 加载类文件
 			$this->cache[$type][$cachekey] = true;
