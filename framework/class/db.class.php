@@ -514,8 +514,8 @@ class SqlPaser {
      * @return string
      */
 	private static function stripSafeChar($sql) {
+	    $sql = "select * from zx_rule where name='/uploads/logo.png'";
 		$len = strlen($sql);
-		echo "1. " . $sql . "\n";
 		$mark = $clean = '';
 		for ($i = 0; $i < $len; $i++) {
 			$str = $sql[$i];
@@ -560,7 +560,7 @@ class SqlPaser {
 			}
 			$clean .= $mark ? '' : $str;
 		}
-		echo "2. " . $sql . "\n";
+		echo $clean;
 		return $clean;
 	}
 
