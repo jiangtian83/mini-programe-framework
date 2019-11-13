@@ -621,7 +621,7 @@ function referer($default = '') {
 	// 拆分url为数组，scheme、host、path、query
 	$reurl = parse_url($_W['referer']);
 
-	// 如果当前访问url跟referer不一样
+	// 如果当前访问url跟referer不一样或根域名不一样
 	if (
 	    !empty($reurl['host'])
         && !in_array($reurl['host'], array($_SERVER['HTTP_HOST'], 'www.' . $_SERVER['HTTP_HOST']))
@@ -1226,19 +1226,14 @@ function getglobal($key) {
 	return $v;
 }
 
-
-
-if (!function_exists('starts_with')) {
-	function starts_with($haystack, $needles) {
-		foreach ((array) $needles as $needle) {
-			if ($needle != '' && substr($haystack, 0, strlen($needle)) === (string) $needle) {
-				return true;
-			}
-		}
-		return false;
-	}
+function starts_with($haystack, $needles) {
+    foreach ((array) $needles as $needle) {
+        if ($needle != '' && substr($haystack, 0, strlen($needle)) === (string) $needle) {
+            return true;
+        }
+    }
+    return false;
 }
-
 
 function check_url_not_outside_link($redirect) {
 	global $_W;

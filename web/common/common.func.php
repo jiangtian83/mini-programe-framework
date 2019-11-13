@@ -33,7 +33,8 @@ function message($msg, $redirect = '', $type = '', $tips = false, $extend = arra
 	if($redirect == 'referer') {
 		$redirect = referer();
 	}
-		$redirect = safe_gpc_url($redirect);
+
+    $redirect = safe_gpc_url($redirect);
 
 	if($redirect == '') {
 		$type = in_array($type, array('success', 'error', 'info', 'warning', 'ajax', 'sql')) ? $type : 'info';
