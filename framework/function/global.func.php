@@ -631,7 +631,6 @@ function referer($default = '') {
 	} elseif (empty($reurl['host'])) {
 		$_W['referer'] = $_W['siteroot'] . './' . $_W['referer'];
 	}
-	echo $_W['referer'];
 	return strip_tags($_W['referer']);
 }
 
