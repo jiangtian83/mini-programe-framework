@@ -6,10 +6,11 @@ require_once './framework/bootstrap.inc.php';
 load()->model('reply'); // 加载模块reply
 load()->model('attachment');
 
-	load()->model('visit');
+load()->model('visit');
 
 load()->app('common');
 load()->classs('wesession');
+die;
 $hash = $_GPC['hash'];
 if(!empty($hash)) {
 	$id = pdo_fetchcolumn("SELECT acid FROM " . tablename('account') . " WHERE hash = :hash", array(':hash' => $hash));
