@@ -3,7 +3,7 @@
 define('IN_SYS', true);
 require '../framework/bootstrap.inc.php';
 require IA_ROOT . '/web/common/bootstrap.sys.inc.php';
-die;
+
 if (!empty($_GPC['state'])) {
 	$login_callback_params = OAuth2Client::supportParams($_GPC['state']);
 	if (!empty($login_callback_params)) {
