@@ -4,7 +4,10 @@
  */
 defined('IN_IA') or exit('Access Denied');
 
-
+/**
+ * 模型类型描述
+ * @return array
+ */
 function module_types() {
 	static $types = array(
 		'business' => array(
@@ -51,6 +54,10 @@ function module_types() {
 	return $types;
 }
 
+/**
+ * 模型支持类型
+ * @return array
+ */
 function module_support_type() {
 		$module_support_type = array(
 		'wxapp_support' => array(
@@ -85,14 +92,20 @@ function module_support_type() {
 	return $module_support_type;
 }
 
-
+/**
+ * 返回模型实体
+ * @param $name
+ * @param array $types
+ * @param int $rid
+ * @param null $args
+ * @return array
+ */
 function module_entries($name, $types = array(), $rid = 0, $args = null) {
 	load()->func('communication');
 
 	global $_W;
 	
-		$ts = array('rule', 'cover', 'menu', 'home', 'profile', 'shortcut', 'function', 'mine', 'system_welcome');
-	
+    $ts = array('rule', 'cover', 'menu', 'home', 'profile', 'shortcut', 'function', 'mine', 'system_welcome');
 	
 	if(empty($types)) {
 		$types = $ts;
@@ -101,6 +114,7 @@ function module_entries($name, $types = array(), $rid = 0, $args = null) {
 	}
 	$bindings = pdo_getall('modules_bindings', array('module' => $name, 'entry' => $types), array(), '', 'displayorder DESC, eid ASC');
 	$entries = array();
+    $extra = array();
 	foreach($bindings as $bind) {
 		if(!empty($bind['call'])) {
 			$response = ihttp_request(url('utility/bindcall', array('modulename' => $bind['module'], 'callname' => $bind['call'], 'args' => $args, 'uniacid' => $_W['uniacid'])), array(), $extra);
@@ -148,6 +162,13 @@ function module_entries($name, $types = array(), $rid = 0, $args = null) {
 	return $entries;
 }
 
+/**
+ * 模型实体
+ * @param $name
+ * @param array $types
+ * @param null $args
+ * @return array
+ */
 function module_app_entries($name, $types = array(), $args = null) {
 	global $_W;
 	$ts = array('rule', 'cover', 'menu', 'home', 'profile', 'shortcut', 'function');
@@ -196,11 +217,16 @@ function module_app_entries($name, $types = array(), $args = null) {
 	return $entries;
 }
 
+/**
+ * 特定模块实体
+ * @param $eid
+ * @return array|bool
+ */
 function module_entry($eid) {
 	$sql = "SELECT * FROM " . tablename('modules_bindings') . " WHERE `eid`=:eid";
 	$pars = array();
 	$pars[':eid'] = $eid;
-	$entry = pdo_fetch($sql, $pars);
+	$entry = pdo_fetch($sql, $pars); // 执行模块库单条查询
 	if(empty($entry)) {
 		return error(1, '模块菜单不存在');
 	}
@@ -279,10 +305,17 @@ function module_save_group_package($package) {
 	return error(0, '添加成功');
 }
 
+/**
+ * 获取模块
+ * @param $name
+ * @param bool $enabled
+ * @return array|bool|Memcache|mixed|Redis|string
+ */
 function module_fetch($name, $enabled = true) {
 	global $_W;
 	$cachekey = cache_system_key('module_info', array('module_name' => $name));
 	$module = cache_load($cachekey);
+	// 无缓存
 	if (empty($module)) {
 		$module_info = table('modules')->getByName($name);
 		if (empty($module_info)) {

@@ -7,12 +7,23 @@ defined('IN_IA') or exit('Access Denied');
 
 load()->model('module');
 
-
+/**
+ * 对方法wurl进行一次封装
+ * @param $segment
+ * @param array $params
+ * @return string
+ */
 function url($segment, $params = array()) {
 	return wurl($segment, $params);
 }
 
-
+/**
+ * @param $msg
+ * @param string $redirect
+ * @param string $type
+ * @param bool $tips
+ * @param array $extend
+ */
 function message($msg, $redirect = '', $type = '', $tips = false, $extend = array()) {
 	global $_W, $_GPC;
 

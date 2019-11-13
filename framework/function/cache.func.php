@@ -67,7 +67,6 @@ function &cache_global($key) {
 function cache_system_key($cache_key) {
 	$cache_key_all = cache_key_all();
 
-		$params = array();
 	$args = func_get_args();
 	if (empty($args[1])) {
 		$args[1] = '';
@@ -231,20 +230,19 @@ function cache_key_all() {
 			'uniacid' => $_W['uniacid'],
 			'uid' => $_W['uid'],
 		),
-
 		'caches' => array(
 			'module_info' => array(
-								'key' => 'module_info:%module_name',
+                'key' => 'module_info:%module_name',
 				'group' => 'module',
 			),
 
 			'module_setting' => array(
-								'key' => 'module_setting:%module_name:%uniacid',
+                'key' => 'module_setting:%module_name:%uniacid',
 				'group' => 'module',
 			),
 
 			'last_account' => array(
-								'key' => 'last_account:%switch',
+                'key' => 'last_account:%switch',
 				'group' => '',
 			),
 
@@ -254,32 +252,32 @@ function cache_key_all() {
 			),
 
 			'user_modules' => array(
-								'key' => 'user_modules:%uid',
+                'key' => 'user_modules:%uid',
 				'group' => '',
 			),
 
 			'user_accounts' => array(
-								'key' => 'user_accounts:%type:%uid',
+                'key' => 'user_accounts:%type:%uid',
 				'group' => '',
 			),
 
 			'unimodules' => array(
-								'key' => 'unimodules:%uniacid:%enabled',
+                'key' => 'unimodules:%uniacid:%enabled',
 				'group' => '',
 			),
 
 			'unimodules_binding' => array(
-								'key' => 'unimodules_binding:%uniacid',
+                'key' => 'unimodules_binding:%uniacid',
 				'group' => '',
 			),
 
 			'uni_groups' => array(
-								'key' => 'uni_groups',
+                'key' => 'uni_groups',
 				'group' => '',
 			),
 
 			'permission' => array(
-								'key' => 'permission:%uniacid:%uid',
+                'key' => 'permission:%uniacid:%uid',
 				'group' => '',
 			),
 
@@ -299,12 +297,12 @@ function cache_key_all() {
 			),
 
 			'material_reply' => array(
-								'key' => 'material_reply:%attach_id',
+                'key' => 'material_reply:%attach_id',
 				'group' => '',
 			),
 
 			'keyword' => array(
-								'key' => 'keyword:%content:%uniacid',
+                'key' => 'keyword:%content:%uniacid',
 				'group' => '',
 			),
 
@@ -339,12 +337,12 @@ function cache_key_all() {
 			),
 
 			'uniaccount' => array(
-								'key' => "uniaccount:%uniacid",
+                'key' => "uniaccount:%uniacid",
 				'group' => 'uniaccount',
 			),
 
 			'unisetting' => array(
-								'key' => "unisetting:%uniacid",
+                'key' => "unisetting:%uniacid",
 				'group' => 'uniaccount',
 			),
 
@@ -386,7 +384,7 @@ function cache_key_all() {
 			),
 
 			'unicount' => array(
-								'key' => 'unicount:%uniacid',
+                'key' => 'unicount:%uniacid',
 				'group' => '',
 			),
 
@@ -540,7 +538,7 @@ function cache_key_all() {
 				'group' => '',
 			),
 		),
-				'groups' => array(
+        'groups' => array(
 			'uniaccount' => array(
 				'relations' => array('uniaccount', 'unisetting', 'defaultgroupid'),
 			),

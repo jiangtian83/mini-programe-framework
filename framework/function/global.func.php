@@ -162,6 +162,11 @@ function checkcaptcha($code) {
 	return $return;
 }
 
+/**
+ * 根据配置文件合并生成表名，将配置的前缀加进去
+ * @param string $table 不带前缀表名
+ * @return string 生成的带前缀表名
+ */
 function tablename($table) {
 	if(empty($GLOBALS['_W']['config']['db']['master'])) {
 		return "`{$GLOBALS['_W']['config']['db']['tablepre']}{$table}`";
@@ -325,7 +330,12 @@ function is_serialized($data, $strict = true) {
 	return false;
 }
 
-
+/**
+ * 对类a/c/do的URL进行切割并组装成查询字符串
+ * @param string $segment 类a/c这种URL
+ * @param array $params url后所带查询参数
+ * @return string 返回处理后的url
+ */
 function wurl($segment, $params = array()) {
 	list($controller, $action, $do) = explode('/', $segment);
 	$url = './index.php?';
@@ -589,23 +599,39 @@ function detect_sensitive_word($string) {
 	return false;
 }
 
+/**
+ * 获取前一个访问url
+ * @param string $default
+ * @return string
+ */
 function referer($default = '') {
 	global $_GPC, $_W;
+	// 从$_SERVER['HTTP_REFERER']中取值
 	$_W['referer'] = !empty($_GPC['referer']) ? $_GPC['referer'] : $_SERVER['HTTP_REFERER'];
+	// 处理调末尾的?
 	$_W['referer'] = substr($_W['referer'], -1) == '?' ? substr($_W['referer'], 0, -1) : $_W['referer'];
 
+	// 当前系统中没有member.php模块
 	if (strpos($_W['referer'], 'member.php?act=login')) {
 		$_W['referer'] = $default;
 	}
-	$_W['referer'] = $_W['referer'];
+
+	// 对html实体&进行替换
 	$_W['referer'] = str_replace('&amp;', '&', $_W['referer']);
+	// 拆分url为数组，scheme、host、path、query
 	$reurl = parse_url($_W['referer']);
 
-	if (!empty($reurl['host']) && !in_array($reurl['host'], array($_SERVER['HTTP_HOST'], 'www.' . $_SERVER['HTTP_HOST'])) && !in_array($_SERVER['HTTP_HOST'], array($reurl['host'], 'www.' . $reurl['host']))) {
+	// 如果当前访问url跟referer不一样
+	if (
+	    !empty($reurl['host'])
+        && !in_array($reurl['host'], array($_SERVER['HTTP_HOST'], 'www.' . $_SERVER['HTTP_HOST']))
+        && !in_array($_SERVER['HTTP_HOST'], array($reurl['host'], 'www.' . $reurl['host'])))
+	{
 		$_W['referer'] = $_W['siteroot'];
 	} elseif (empty($reurl['host'])) {
 		$_W['referer'] = $_W['siteroot'] . './' . $_W['referer'];
 	}
+	echo $_W['referer'];
 	return strip_tags($_W['referer']);
 }
 
