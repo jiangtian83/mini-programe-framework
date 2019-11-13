@@ -3,7 +3,7 @@
  * [zhixue-inc System] Copyright (c) 2019 zhimanfen.com
  */
 defined('IN_IA') or exit('Access Denied');
-define('PDO_DEBUG', true);
+define('PDO_DEBUG', true); // pdo调试开关
 
 class DB {
 	protected $pdo;
@@ -66,6 +66,7 @@ class DB {
 	}
 
 	public function prepare($sql) {
+	    // 检测sql语句安全性
 		$sqlsafe = SqlPaser::checkquery($sql);
 		if (is_error($sqlsafe)) {
 			trigger_error($sqlsafe['message'], E_USER_ERROR);
@@ -109,7 +110,7 @@ class DB {
 
 	
 	public function fetchcolumn($sql, $params = array(), $column = 0) {
-		$starttime = microtime();
+		$starttime = microtime(); // 开始毫秒时
 		$statement = $this->prepare($sql);
 		$result = $statement->execute($params);
 
@@ -451,18 +452,32 @@ class SqlPaser {
 		'note' => array('/*','*/','#','--'),
 	);
 
+    /**
+     * 检测是否含禁用函数，禁用操作符和注释信息
+     * @param string $sql 待检测sql字符串
+     * @return array 返回错误信息或无返回
+     */
 	public static function checkquery($sql) {
+	    // 检测sql语句开始语句限定在增删改查替换
 		$cmd = strtoupper(substr(trim($sql), 0, 6));
 		if (in_array($cmd, self::$checkcmd)) {
-			$mark = $clean = '';
+			// 对\\，\'，\"，''进行过滤
 			$sql = str_replace(array('\\\\', '\\\'', '\\"', '\'\''), '', $sql);
-			if (strpos($sql, '/') === false && strpos($sql, '#') === false && strpos($sql, '-- ') === false && strpos($sql, '@') === false && strpos($sql, '`') === false) {
+			if (
+			    strpos($sql, '/') === false
+                && strpos($sql, '#') === false
+                && strpos($sql, '-- ') === false
+                && strpos($sql, '@') === false
+                && strpos($sql, '`') === false
+            ) {
+			    // 如果未检测到特殊字符，直接对sql进行替换
 				$cleansql = preg_replace("/'(.+?)'/s", '', $sql);
 			} else {
 				$cleansql = self::stripSafeChar($sql);
 			}
 
 			$cleansql = preg_replace("/[^a-z0-9_\-\(\)#\*\/\"]+/is", "", strtolower($cleansql));
+			// 检测禁用函数
 			if (is_array(self::$disable['function'])) {
 				foreach (self::$disable['function'] as $fun) {
 					if (strpos($cleansql, $fun . '(') !== false) {
@@ -471,6 +486,7 @@ class SqlPaser {
 				}
 			}
 
+            // 检测禁用操作符
 			if (is_array(self::$disable['action'])) {
 				foreach (self::$disable['action'] as $action) {
 					if (strpos($cleansql, $action) !== false) {
@@ -479,6 +495,7 @@ class SqlPaser {
 				}
 			}
 
+			// 检测注释信息
 			if (is_array(self::$disable['note'])) {
 				foreach (self::$disable['note'] as $note) {
 					if (strpos($cleansql, $note) !== false) {
@@ -487,12 +504,18 @@ class SqlPaser {
 				}
 			}
 		} elseif (substr($cmd, 0, 2) === '/*') {
+		    // sql开头包含注释信息
 			return error(3, 'SQL中包含注释信息');
 		}
 	}
 
+    /**
+     * @param $sql
+     * @return string
+     */
 	private static function stripSafeChar($sql) {
 		$len = strlen($sql);
+		echo "1. " . $sql . "\n";
 		$mark = $clean = '';
 		for ($i = 0; $i < $len; $i++) {
 			$str = $sql[$i];
@@ -537,6 +560,7 @@ class SqlPaser {
 			}
 			$clean .= $mark ? '' : $str;
 		}
+		echo "2. " . $sql . "\n";
 		return $clean;
 	}
 

@@ -1,24 +1,29 @@
 <?php
 /**
- * [WeEngine System] Copyright (c) 2014 WE7.CC
- * WeEngine is NOT a free software, it under the license terms, visited http://www.we7.cc/ for more details.
+ * [zhixue-inc System] Copyright (c) 2019 zhimanfen.com
  */
-defined('IN_IA') or exit('Access Denied');
+defined('IN_IA') or exit('Access Denied'); // IN_IA标示bootstrap.sys.inc.php是否加载，对其有依赖关系
 
-
+/**
+ * @param string $condition 其写法必须是合法的sql语句where条件
+ * @param array $params
+ * @param int $pindex 查询偏移量，offset
+ * @param int $psize 一次查询限定条数
+ * @param int $total 查询总数
+ * @return array
+ */
 function reply_search($condition = '', $params = array(), $pindex = 0, $psize = 10, &$total = 0) {
 	if (!empty($condition)) {
 		$where = " WHERE {$condition}";
 	}
 	$sql = "SELECT * FROM " . tablename('rule') . $where . " ORDER BY status DESC, displayorder DESC, id DESC";
 	if ($pindex > 0) {
-				$start = ($pindex - 1) * $psize;
+        $start = ($pindex - 1) * $psize;
 		$sql .= " LIMIT {$start},{$psize}";
 		$total = pdo_fetchcolumn('SELECT COUNT(*) FROM ' . tablename('rule') . $where, $params);
 	}
 	return pdo_fetchall($sql, $params);
 }
-
 
 function reply_single($id) {
 	$id = intval($id);

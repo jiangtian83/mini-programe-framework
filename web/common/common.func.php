@@ -5,6 +5,7 @@
  */
 defined('IN_IA') or exit('Access Denied');
 
+// 加载模块
 load()->model('module');
 
 /**
@@ -18,6 +19,7 @@ function url($segment, $params = array()) {
 }
 
 /**
+ * 提示信息方法
  * @param $msg
  * @param string $redirect
  * @param string $type
@@ -41,16 +43,18 @@ function message($msg, $redirect = '', $type = '', $tips = false, $extend = arra
 	} else {
 		$type = in_array($type, array('success', 'error', 'info', 'warning', 'ajax', 'sql')) ? $type : 'success';
 	}
+
 	if ($_W['isajax'] || !empty($_GET['isajax']) || $type == 'ajax') {
 		if($type != 'ajax' && !empty($_GPC['target'])) {
 			exit("
-<script type=\"text/javascript\">
-	var url = ".(!empty($redirect) ? 'parent.location.href' : "''").";
-	var modalobj = util.message('".$msg."', '', '".$type."');
-	if (url) {
-		modalobj.on('hide.bs.modal', function(){\$('.modal').each(function(){if(\$(this).attr('id') != 'modal-message') {\$(this).modal('hide');}});top.location.reload()});
-	}
-</script>");
+                <script type=\"text/javascript\">
+                    var url = ".(!empty($redirect) ? 'parent.location.href' : "''").";
+                    var modalobj = util.message('".$msg."', '', '".$type."');
+                    if (url) {
+                        modalobj.on('hide.bs.modal', function(){\$('.modal').each(function(){if(\$(this).attr('id') != 'modal-message') {\$(this).modal('hide');}});top.location.reload()});
+                    }
+                </script>
+            ");
 		} else {
 			$vars = array();
 			$vars['message'] = $msg;

@@ -568,7 +568,12 @@ function to_global_media($src) {
 	return $src;
 }
 
-
+/**
+ * 错误结果信息
+ * @param int $errno 错误码
+ * @param string $message 错误信息
+ * @return array
+ */
 function error($errno, $message = '') {
 	return array(
 		'errno' => $errno,
@@ -576,9 +581,18 @@ function error($errno, $message = '') {
 	);
 }
 
-
+/**
+ * 判断返回结果是否有错误信息
+ * @param array $data 被判断的数组
+ * @return bool 返回结果，errno=0代表无错误，非0代表有错误
+ */
 function is_error($data) {
-	if (empty($data) || !is_array($data) || !array_key_exists('errno', $data) || (array_key_exists('errno', $data) && $data['errno'] == 0)) {
+	if (
+	    empty($data)
+        || !is_array($data)
+        || !array_key_exists('errno', $data)
+        || (array_key_exists('errno', $data) && $data['errno'] == 0)
+    ) {
 		return false;
 	} else {
 		return true;

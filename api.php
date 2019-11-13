@@ -1,8 +1,9 @@
 <?php
 
+// 标识api
 define('IN_API', true);
 require_once './framework/bootstrap.inc.php';
-load()->model('reply');
+load()->model('reply'); // 加载模块reply
 load()->model('attachment');
 
 	load()->model('visit');
