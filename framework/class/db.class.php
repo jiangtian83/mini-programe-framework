@@ -41,7 +41,6 @@ class DB {
 			$cfg = $this->cfg[$name];
 		}
 		$this->tablepre = $cfg['tablepre'];
-		echo json_encode($cfg) . ".1.";
 		if(empty($cfg)) {
 			exit("The master database is not found, Please checking 'data/config.php'");
 		}
