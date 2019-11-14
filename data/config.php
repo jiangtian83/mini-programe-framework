@@ -4,10 +4,10 @@ defined('IN_IA') or exit('Access Denied');
 $config = array();
 
 $config['db']['master']['host'] = '127.0.0.1';
-$config['db']['master']['username'] = 'baidu_zhimanfen_';
-$config['db']['master']['password'] = 'WZdyyiz7WBFeBZzn';
+$config['db']['master']['username'] = 'baidu_zhimanfen';
+$config['db']['master']['password'] = 'bskBmCdc6c8zmsRT';
 $config['db']['master']['port'] = '3306';
-$config['db']['master']['database'] = 'baidu_zhimanfen_';
+$config['db']['master']['database'] = 'baidu_zhimanfen';
 $config['db']['master']['charset'] = 'utf8';
 $config['db']['master']['pconnect'] = 0;
 $config['db']['master']['tablepre'] = 'zx_';

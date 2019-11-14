@@ -1,5 +1,12 @@
 <?php
-$arr = ['a' => 1573526860, 'b' => 1573526859, 'c' => 1573526858];
-asort($arr);
-var_dump($arr);
+$error = array(
+    	E_ERROR,
+        E_PARSE,
+        E_CORE_ERROR,
+        E_CORE_WARNING,
+        E_COMPILE_ERROR,
+        E_COMPILE_WARNING,
+        E_STRICT,
+);
+echo E_ERROR & $error;
 ?>
