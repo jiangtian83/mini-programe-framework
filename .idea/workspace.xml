@@ -4,6 +4,7 @@
     <list default="true" id="eb486dca-b59e-4ca5-9483-f11ad8bec115" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/bootstrap.inc.php" afterPath="$PROJECT_DIR$/framework/bootstrap.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/version.inc.php" afterPath="$PROJECT_DIR$/framework/version.inc.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -107,8 +108,8 @@
       <file leaf-file-name="bootstrap.inc.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/framework/bootstrap.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+            <state relative-caret-position="60">
+              <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -118,13 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>v</find>
-      <find>log_errors</find>
-      <find>$exclude</find>
-      <find>lastHandledException</find>
-      <find>$old_exception_handler</find>
-      <find>pdo</find>
-      <find>$GLOBALS['error_handler']</find>
       <find>@</find>
       <find>$</find>
       <find>$_</find>
@@ -146,8 +140,15 @@
       <find>$this-&gt;exclude</find>
       <find>old_exception_handler</find>
       <find>error_handler</find>
-      <find>error_reporting</find>
       <find>setcoo</find>
+      <find>error_reporting</find>
+      <find>\	\	\	\	\{elseif IMS_FAMILY \=\= \'s\'\}\n</find>
+      <find>F</find>
+      <find>I</find>
+      <find>IMS</find>
+      <find>IMS_FAMILY</find>
+      <find>IMS_VERSION</find>
+      <find>201808300001</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -165,7 +166,6 @@
       <list>
         <option value="$PROJECT_DIR$/framework/table/Modules/Modules.php" />
         <option value="$PROJECT_DIR$/web/source/home/welcome.ctrl.php" />
-        <option value="$PROJECT_DIR$/framework/version.inc.php" />
         <option value="$PROJECT_DIR$/framework/model/account.mod.php" />
         <option value="$PROJECT_DIR$/framework/library/sentry/Raven/Autoloader.php" />
         <option value="$PROJECT_DIR$/framework/function/compat.func.php" />
@@ -190,6 +190,7 @@
         <option value="$PROJECT_DIR$/framework/function/pdo.func.php" />
         <option value="$PROJECT_DIR$/framework/class/db.class.php" />
         <option value="$PROJECT_DIR$/api.php" />
+        <option value="$PROJECT_DIR$/framework/version.inc.php" />
         <option value="$PROJECT_DIR$/framework/bootstrap.inc.php" />
       </list>
     </option>
@@ -333,7 +334,7 @@
     <property name="nodejs_interpreter_path" value="/usr/local/Cellar/node/11.1.0/bin/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="install&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;wesession.&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/wesession.class.php&#10;modu&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;common.&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;visit.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/visit.mod.php&#10;attachment.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/attachment.mod.php&#10;confi&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;conf&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;slave&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/slave.db.class.php&#10;reply&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/reply.mod.php&#10;config&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;reply.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/reply.mod.php&#10;compat.bi&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.biz.func.php&#10;modul&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;common&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;cache&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;siteroot&#9;null&#9;null&#10;config.&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;module.&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;template.fun&#9;FILE&#9;file:///Users/jt/app/we7/app/common/template.func.php&#10;common.func&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;install.&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;bootstrap.sys.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/web/common/bootstrap.sys.inc.php&#10;addons/yyf_baidu/project.swan.json&#9;FILE&#9;file:///Users/jt/app/we7/addons/yyf_baidu/project.swan.json&#10;data/config.php&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;framework/bootstrap.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/bootstrap.inc.php&#10;framework/class/account.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;framework/class/db.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;framework/class/loader.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;framework/function/cache.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;framework/function/communication.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;framework/function/compat.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;framework/function/global.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/global.func.php&#10;framework/function/pdo.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;framework/library/sentry/Raven/Autoloader.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/sentry/Raven/Autoloader.php&#10;account.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/account.mod.php&#10;module.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php&#10;version.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/version.inc.php&#10;welcome.ctrl.php&#9;FILE&#9;file:///Users/jt/app/we7/web/source/home/welcome.ctrl.php&#10;cache.fu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;agent&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;Raven_Autoloader&#9;null&#9;null&#10;loader&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;commu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;db.c&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;agent.&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;module.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php&#10;account.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/account.mod.php" />
+    <property name="SearchEverywhereHistoryKey" value="version.&#9;FILE&#9;file:///Users/jt/app/we7/framework/version.inc.php&#10;install&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;wesession.&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/wesession.class.php&#10;modu&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;common.&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;visit.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/visit.mod.php&#10;attachment.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/attachment.mod.php&#10;confi&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;conf&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;slave&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/slave.db.class.php&#10;reply&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/reply.mod.php&#10;config&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;reply.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/reply.mod.php&#10;compat.bi&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.biz.func.php&#10;modul&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;common&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;cache&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;siteroot&#9;null&#9;null&#10;config.&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;module.&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;template.fun&#9;FILE&#9;file:///Users/jt/app/we7/app/common/template.func.php&#10;common.func&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;install.&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;bootstrap.sys.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/web/common/bootstrap.sys.inc.php&#10;addons/yyf_baidu/project.swan.json&#9;FILE&#9;file:///Users/jt/app/we7/addons/yyf_baidu/project.swan.json&#10;data/config.php&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;framework/bootstrap.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/bootstrap.inc.php&#10;framework/class/account.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;framework/class/db.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;framework/class/loader.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;framework/function/cache.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;framework/function/communication.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;framework/function/compat.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;framework/function/global.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/global.func.php&#10;framework/function/pdo.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;framework/library/sentry/Raven/Autoloader.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/sentry/Raven/Autoloader.php&#10;account.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/account.mod.php&#10;module.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php&#10;version.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/version.inc.php&#10;welcome.ctrl.php&#9;FILE&#9;file:///Users/jt/app/we7/web/source/home/welcome.ctrl.php&#10;cache.fu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;agent&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;Raven_Autoloader&#9;null&#9;null&#10;loader&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;commu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;db.c&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;agent.&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;module.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -444,12 +445,12 @@
       <workItem from="1573198574494" duration="463000" />
       <workItem from="1573350762525" duration="26857000" />
       <workItem from="1573526764728" duration="18331000" />
-      <workItem from="1573698552551" duration="13745000" />
+      <workItem from="1573698552551" duration="14233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63901000" />
+    <option name="totallyTimeSpent" value="64389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -463,7 +464,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -485,13 +486,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/framework/function/az.func.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/framework/builtin/chats/module.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -553,14 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/version.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -648,9 +634,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-          <folding>
-            <marker date="1573451686000" expanded="true" signature="845:859" ph="SELECT * FRO... ${tablename('core_settings')}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -901,9 +885,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-11407">
           <caret line="186" column="48" lean-forward="false" selection-start-line="186" selection-start-column="48" selection-end-line="186" selection-end-column="48" />
-          <folding>
-            <marker date="1573530718000" expanded="true" signature="6201:6269" ph="SELECT * FRO... ${tablename('modules_bindings')}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -990,10 +972,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/default/system/systeminfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-674">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/version.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/framework/bootstrap.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        <state relative-caret-position="60">
+          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding />
         </state>
       </provider>

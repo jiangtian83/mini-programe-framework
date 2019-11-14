@@ -12,11 +12,12 @@ $_W = $_GPC = array();
 $configfile = IA_ROOT . "/data/config.php";
 
 // 检测配置文件，不存在则需要安装
+$configfile = "fdsafdsaf";
 if(!file_exists($configfile)) {
 	if(file_exists(IA_ROOT . '/install.php')) {
 		header('Content-Type: text/html; charset=utf-8');
-		//require IA_ROOT . '/framework/version.inc.php';
-		//echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
+		require IA_ROOT . '/framework/version.inc.php';
+		echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
 		echo "·如果你还没安装本程序，请运行<a href='".(strpos($_SERVER['SCRIPT_NAME'], 'web') === false ? './install.php' : '../install.php')."'> install.php 进入安装&gt;&gt; </a><br/><br/>";
 		exit();
 	} else {
