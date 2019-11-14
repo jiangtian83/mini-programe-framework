@@ -1,12 +1,6 @@
 <?php
-$error = array(
-    	E_ERROR,
-        E_PARSE,
-        E_CORE_ERROR,
-        E_CORE_WARNING,
-        E_COMPILE_ERROR,
-        E_COMPILE_WARNING,
-        E_STRICT,
-);
-echo E_ERROR & $error;
+//echo addslashes("O'reilly");
+if (function_exists("mysql_real_escape_string")) {
+    echo mysql_real_escape_string("O\'reilly");
+} else echo 'function not exists.'
 ?>
