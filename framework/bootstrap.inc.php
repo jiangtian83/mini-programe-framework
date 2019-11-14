@@ -21,7 +21,7 @@ if(!file_exists($configfile)) {
 		exit();
 	} else {
 		header('Content-Type: text/html; charset=utf-8');
-		exit('配置文件及安装文件' . (strpos($_SERVER['SCRIPT_NAME'], 'web') === false ? './install.php' : '../install.php') . '都不u 存在，请检查“data/config”文件及安装文件！');
+		exit('配置文件及安装文件都不存在，请检查“data/config”文件及安装文件install.php是否放置在根目录或web目录下！');
 	}
 }
 

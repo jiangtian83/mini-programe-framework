@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="eb486dca-b59e-4ca5-9483-f11ad8bec115" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/bootstrap.inc.php" afterPath="$PROJECT_DIR$/framework/bootstrap.inc.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -94,8 +95,8 @@
       <file leaf-file-name="bootstrap.inc.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/framework/bootstrap.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="18" column="85" lean-forward="false" selection-start-line="18" selection-start-column="85" selection-end-line="18" selection-end-column="85" />
+            <state relative-caret-position="195">
+              <caret line="23" column="77" lean-forward="false" selection-start-line="23" selection-start-column="77" selection-end-line="23" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -433,12 +434,12 @@
       <workItem from="1573350762525" duration="26857000" />
       <workItem from="1573526764728" duration="18331000" />
       <workItem from="1573698552551" duration="14250000" />
-      <workItem from="1573726196547" duration="395000" />
+      <workItem from="1573726196547" duration="523000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64801000" />
+    <option name="totallyTimeSpent" value="64929000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -918,8 +919,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/framework/bootstrap.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="18" column="85" lean-forward="false" selection-start-line="18" selection-start-column="85" selection-end-line="18" selection-end-column="85" />
+        <state relative-caret-position="195">
+          <caret line="23" column="77" lean-forward="false" selection-start-line="23" selection-start-column="77" selection-end-line="23" selection-end-column="77" />
           <folding />
         </state>
       </provider>
