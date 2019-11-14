@@ -38,6 +38,7 @@ $config['setting']['memory_limit'] = '256M';
 $config['setting']['filemode'] = 0644;
 $config['setting']['authkey'] = 'b7535c8a';
 $config['setting']['founder'] = '1';
+// 是否开发环境，0为否，系统取值目前有2和3
 $config['setting']['development'] = 0;
 $config['setting']['referrer'] = 0;
 

@@ -4,11 +4,15 @@
  */
 defined('IN_IA') or exit('Access Denied');
 
-
+/**
+ * 生成DB实例
+ * @return DB|SlaveDb
+ */
 function pdo() {
 	global $_W;
 	static $db;
 	if(empty($db)) {
+	    // 优先使用从库，并用其生成当前激活库实例
 		if($_W['config']['db']['slave_status'] == true && !empty($_W['config']['db']['slave'])) {
 			load()->classs('slave.db');
 			$db = new SlaveDb('master');
@@ -35,7 +39,13 @@ function pdo_query($sql, $params = array()) {
 	return pdo()->query($sql, $params);
 }
 
-
+/**
+ * 做一次pdo调用的封装
+ * @param $sql
+ * @param array $params
+ * @param int $column
+ * @return bool|string
+ */
 function pdo_fetchcolumn($sql, $params = array(), $column = 0) {
 	return pdo()->fetchcolumn($sql, $params, $column);
 }

@@ -1,5 +1,4 @@
 <?php
-
 /*
  * This file is part of Raven.
  *
@@ -76,6 +75,11 @@ class Raven_ErrorHandler
         return $a | $b;
     }
 
+    /**
+     * @param $e
+     * @param bool $isError
+     * @param null $vars
+     */
     public function handleException($e, $isError = false, $vars = null)
     {
         $e->event_id = $this->client->captureException($e, null, null, $vars);
@@ -125,10 +129,15 @@ class Raven_ErrorHandler
         return true;
     }
 
+    /**
+     * 处理致命错误函数
+     */
     public function handleFatalError()
     {
+        // 将保留的用于处理致命错误的内存释放
         unset($this->reservedMemory);
 
+        // 未捕获到错误，返回['type' => '', 'message' => '', 'file' => '', 'line' => '']
         if (null === $error = error_get_last()) {
             return;
         }
@@ -207,7 +216,7 @@ class Raven_ErrorHandler
 
     /**
      * Register a fatal error handler, which will attempt to capture errors which
-     * shutdown the PHP process. These are commonly things like OOM or timeouts.
+     * shutdown the PHP process. These are commonly things like OOM(Out Of Memory) or timeouts.
      *
      * @param int $reservedMemorySize Number of kilobytes memory space to reserve,
      *                                which is utilized when handling fatal errors.
