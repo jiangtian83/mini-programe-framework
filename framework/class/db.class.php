@@ -519,6 +519,8 @@ class SqlPaser {
 		$mark = $clean = '';
 		for ($i = 0; $i < $len; $i++) {
 			$str = $sql[$i];
+            // mysql注释，/* */块注释，#行注释， -- 行注释
+            // 防sql注入
 			switch ($str) {
 				case '\'':
 					if (!$mark) {
@@ -545,7 +547,7 @@ class SqlPaser {
 					}
 					break;
 				case "\n":
-					if ($mark == '#' || $mark == '--') {
+					if ($mark == '#' || $mark == '-- ') {
 						$mark = '';
 					}
 					break;
@@ -560,7 +562,6 @@ class SqlPaser {
 			}
 			$clean .= $mark ? '' : $str;
 		}
-		echo $clean;
 		return $clean;
 	}
 
