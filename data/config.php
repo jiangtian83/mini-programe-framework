@@ -10,17 +10,17 @@ $config['db']['master']['port'] = '3306';
 $config['db']['master']['database'] = 'baidu_zhimanfen_';
 $config['db']['master']['charset'] = 'utf8';
 $config['db']['master']['pconnect'] = 0;
-$config['db']['master']['tablepre'] = 'ims_';
+$config['db']['master']['tablepre'] = 'zx_';
 
 $config['db']['slave_status'] = true;
-$config['db']['slave']['1']['host'] = '';
-$config['db']['slave']['1']['username'] = '';
-$config['db']['slave']['1']['password'] = '';
-$config['db']['slave']['1']['port'] = '3307';
-$config['db']['slave']['1']['database'] = '';
+$config['db']['slave']['1']['host'] = '127.0.0.1';
+$config['db']['slave']['1']['username'] = 'zhimanfen_slave';
+$config['db']['slave']['1']['password'] = 'sFGpwPJRyShCn2Gj';
+$config['db']['slave']['1']['port'] = '3306';
+$config['db']['slave']['1']['database'] = 'zhimanfen_slave';
 $config['db']['slave']['1']['charset'] = 'utf8';
 $config['db']['slave']['1']['pconnect'] = 0;
-$config['db']['slave']['1']['tablepre'] = 'ims_';
+$config['db']['slave']['1']['tablepre'] = 'zx_';
 $config['db']['slave']['1']['weight'] = 0;
 
 $config['db']['common']['slave_except_table'] = array('core_sessions');
