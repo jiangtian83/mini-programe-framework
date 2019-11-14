@@ -25,8 +25,8 @@ class DB {
      */
 	public function __construct($name = 'master') {
 		global $_W;
-		echo json_encode($_W);
 		$this->cfg = $_W['config']['db'];
+		echo json_encode($this->cfg);
         unset($_W['config']['db']);
 		$_W['config']['db']['tablepre'] = $this->cfg['tablepre'];
 		$_W['config']['db']['slave_status'] = $this->cfg['slave_status'];
