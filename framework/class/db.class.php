@@ -26,10 +26,11 @@ class DB {
 	public function __construct($name = 'master') {
 		global $_W;
 		$this->cfg = $_W['config']['db'];
-		echo json_encode($this->cfg);
         unset($_W['config']['db']);
+        // tablepre在bootstrap.inc.php做了共享配置，slave_status在配置文件即做了配置，on or off
 		$_W['config']['db']['tablepre'] = $this->cfg['tablepre'];
 		$_W['config']['db']['slave_status'] = $this->cfg['slave_status'];
+		echo json_encode($_W);
 		$this->connect($name);
 	}
 
