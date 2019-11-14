@@ -4,6 +4,8 @@
     <list default="true" id="eb486dca-b59e-4ca5-9483-f11ad8bec115" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api.php" afterPath="$PROJECT_DIR$/api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/bootstrap.inc.php" afterPath="$PROJECT_DIR$/framework/bootstrap.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,18 +17,18 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+            <state relative-caret-position="60">
+              <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
               <folding>
-                <marker date="1573723073000" expanded="true" signature="301:365" ph="SELECT acid ${tablename('account')}" />
-                <marker date="1573723073000" expanded="true" signature="673:747" ph="SELECT acid ${tablename('account_wechats')}" />
-                <marker date="1573723073000" expanded="true" signature="10333:10425" ph="SELECT group... ${tablename('mc_groups')}" />
-                <marker date="1573723073000" expanded="true" signature="15550:15665" ph="SELECT `id`,... ${tablename('qrcode')}" />
-                <marker date="1573723073000" expanded="true" signature="16685:16800" ph="SELECT `id`,... ${tablename('qrcode')}" />
-                <marker date="1573723073000" expanded="true" signature="16977:17094" ph="SELECT `id`,... ${tablename('qrcode')}" />
+                <marker date="1573723093000" expanded="true" signature="296:360" ph="SELECT acid ${tablename('account')}" />
+                <marker date="1573723093000" expanded="true" signature="668:742" ph="SELECT acid ${tablename('account_wechats')}" />
+                <marker date="1573723093000" expanded="true" signature="10328:10420" ph="SELECT group... ${tablename('mc_groups')}" />
+                <marker date="1573723093000" expanded="true" signature="15545:15660" ph="SELECT `id`,... ${tablename('qrcode')}" />
+                <marker date="1573723093000" expanded="true" signature="16680:16795" ph="SELECT `id`,... ${tablename('qrcode')}" />
+                <marker date="1573723093000" expanded="true" signature="16972:17089" ph="SELECT `id`,... ${tablename('qrcode')}" />
               </folding>
             </state>
           </provider>
@@ -104,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.inc.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bootstrap.inc.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/framework/bootstrap.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -172,7 +174,6 @@
         <option value="$PROJECT_DIR$/framework/function/communication.func.php" />
         <option value="$PROJECT_DIR$/framework/class/account.class.php" />
         <option value="$PROJECT_DIR$/addons/yyf_baidu/project.swan.json" />
-        <option value="$PROJECT_DIR$/framework/bootstrap.inc.php" />
         <option value="$PROJECT_DIR$/framework/model/setting.mod.php" />
         <option value="$PROJECT_DIR$/install.php" />
         <option value="$PROJECT_DIR$/web/common/bootstrap.sys.inc.php" />
@@ -191,6 +192,7 @@
         <option value="$PROJECT_DIR$/framework/function/pdo.func.php" />
         <option value="$PROJECT_DIR$/framework/class/db.class.php" />
         <option value="$PROJECT_DIR$/api.php" />
+        <option value="$PROJECT_DIR$/framework/bootstrap.inc.php" />
       </list>
     </option>
   </component>
@@ -444,12 +446,12 @@
       <workItem from="1573198574494" duration="463000" />
       <workItem from="1573350762525" duration="26857000" />
       <workItem from="1573526764728" duration="18331000" />
-      <workItem from="1573698552551" duration="12445000" />
+      <workItem from="1573698552551" duration="13522000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62601000" />
+    <option name="totallyTimeSpent" value="63678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -503,6 +505,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -531,6 +534,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2130">
           <caret line="140" column="8" lean-forward="false" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -559,6 +563,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -884,14 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/bootstrap.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/framework/model/attachment.mod.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -979,16 +976,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        <state relative-caret-position="60">
+          <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
           <folding>
-            <marker date="1573723073000" expanded="true" signature="301:365" ph="SELECT acid ${tablename('account')}" />
-            <marker date="1573723073000" expanded="true" signature="673:747" ph="SELECT acid ${tablename('account_wechats')}" />
-            <marker date="1573723073000" expanded="true" signature="10333:10425" ph="SELECT group... ${tablename('mc_groups')}" />
-            <marker date="1573723073000" expanded="true" signature="15550:15665" ph="SELECT `id`,... ${tablename('qrcode')}" />
-            <marker date="1573723073000" expanded="true" signature="16685:16800" ph="SELECT `id`,... ${tablename('qrcode')}" />
-            <marker date="1573723073000" expanded="true" signature="16977:17094" ph="SELECT `id`,... ${tablename('qrcode')}" />
+            <marker date="1573723093000" expanded="true" signature="296:360" ph="SELECT acid ${tablename('account')}" />
+            <marker date="1573723093000" expanded="true" signature="668:742" ph="SELECT acid ${tablename('account_wechats')}" />
+            <marker date="1573723093000" expanded="true" signature="10328:10420" ph="SELECT group... ${tablename('mc_groups')}" />
+            <marker date="1573723093000" expanded="true" signature="15545:15660" ph="SELECT `id`,... ${tablename('qrcode')}" />
+            <marker date="1573723093000" expanded="true" signature="16680:16795" ph="SELECT `id`,... ${tablename('qrcode')}" />
+            <marker date="1573723093000" expanded="true" signature="16972:17089" ph="SELECT `id`,... ${tablename('qrcode')}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/bootstrap.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>

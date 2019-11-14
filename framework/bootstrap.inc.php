@@ -1,10 +1,10 @@
 <?php
 
-define('IN_IA', true); // 标示是否bootstap
-define('STARTTIME', microtime());
-define('IA_ROOT', str_replace("\\", '/', dirname(dirname(__FILE__))));
-define('MAGIC_QUOTES_GPC', (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) || @ini_get('magic_quotes_sybase'));
-define('TIMESTAMP', time());
+define('IN_IA', true); // 标示是否bootstrap
+define('STARTTIME', microtime()); // 标识应用开始时间毫秒
+define('IA_ROOT', str_replace("\\", '/', dirname(dirname(__FILE__)))); // 应用根路径
+define('MAGIC_QUOTES_GPC', (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) || @ini_get('magic_quotes_sybase')); // 是否启用了魔术引号，自php5.4.0都已经废弃
+define('TIMESTAMP', time()); // 标识时间戳
 
 // $_GPC变量存储的是经过转义，安全过滤的请求或cookie变量等
 // $_W存储的过程中赋值的配置数据，是系统$config的拷贝
@@ -16,7 +16,7 @@ if(!file_exists($configfile)) {
 	if(file_exists(IA_ROOT . '/install.php')) {
 		header('Content-Type: text/html; charset=utf-8');
 		require IA_ROOT . '/framework/version.inc.php';
-		echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
+		//echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
 		echo "·如果你还没安装本程序，请运行<a href='".(strpos($_SERVER['SCRIPT_NAME'], 'web') === false ? './install.php' : '../install.php')."'> install.php 进入安装&gt;&gt; </a><br/><br/>";
 		exit();
 	} else {
