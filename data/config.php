@@ -12,7 +12,7 @@ $config['db']['master']['charset'] = 'utf8';
 $config['db']['master']['pconnect'] = 0;
 $config['db']['master']['tablepre'] = 'ims_';
 
-$config['db']['slave_status'] = false;
+$config['db']['slave_status'] = true;
 $config['db']['slave']['1']['host'] = '';
 $config['db']['slave']['1']['username'] = '';
 $config['db']['slave']['1']['password'] = '';
