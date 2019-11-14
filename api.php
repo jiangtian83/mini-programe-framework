@@ -11,6 +11,7 @@ load()->model('visit');
 load()->app('common');
 load()->classs('wesession');
 $hash = $_GPC['hash'];
+die;
 if(!empty($hash)) {
 	$id = pdo_fetchcolumn("SELECT acid FROM " . tablename('account') . " WHERE hash = :hash", array(':hash' => $hash));
 }
