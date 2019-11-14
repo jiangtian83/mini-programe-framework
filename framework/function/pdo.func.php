@@ -15,7 +15,6 @@ function pdo() {
 	    // 优先使用从库，并用其生成当前激活库实例
 		if($_W['config']['db']['slave_status'] == true && !empty($_W['config']['db']['slave'])) {
 			load()->classs('slave.db');
-			echo 9;die;
 			$db = new SlaveDb('master'); // SlaveDb是DB的子实例
 		} else {
 			load()->classs('db');
