@@ -9,4 +9,5 @@ $error = array(
         E_STRICT,
 );
 echo E_ERROR & $error;
+echo get_magic_quotes_gpc();
 ?>
