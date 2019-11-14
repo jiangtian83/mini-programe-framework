@@ -6,6 +6,7 @@ defined('IN_IA') or exit('Access Denied');
 define('PDO_DEBUG', true); // pdo调试开关
 
 class DB {
+    /** @var PDO $pdo */
 	protected $pdo;
 	protected $cfg;
 	protected $tablepre;
@@ -18,10 +19,15 @@ class DB {
 		return $this->pdo;
 	}
 
+    /**
+     * DB constructor.
+     * @param string $name
+     */
 	public function __construct($name = 'master') {
 		global $_W;
+		echo json_encode($_W);
 		$this->cfg = $_W['config']['db'];
-				unset($_W['config']['db']);
+        unset($_W['config']['db']);
 		$_W['config']['db']['tablepre'] = $this->cfg['tablepre'];
 		$_W['config']['db']['slave_status'] = $this->cfg['slave_status'];
 		$this->connect($name);
@@ -65,6 +71,11 @@ class DB {
 		$this->logging($sql);
 	}
 
+    /**
+     * 预处理sql
+     * @param string $sql sql字符串
+     * @return bool|PDOStatement
+     */
 	public function prepare($sql) {
 	    // 检测sql语句安全性
 		$sqlsafe = SqlPaser::checkquery($sql);
@@ -111,7 +122,7 @@ class DB {
 	
 	public function fetchcolumn($sql, $params = array(), $column = 0) {
 		$starttime = microtime(); // 开始毫秒时
-		$statement = $this->prepare($sql);
+		$statement = $this->prepare($sql); // 安全过滤
 		$result = $statement->execute($params);
 
 		$this->logging($sql, $params, $statement->errorInfo());
@@ -470,7 +481,7 @@ class SqlPaser {
                 && strpos($sql, '@') === false
                 && strpos($sql, '`') === false
             ) {
-			    // 如果未检测到特殊字符，直接对sql进行替换
+			    // 如果未检测到特殊字符，直接对sql中单引号部分进行替换
 				$cleansql = preg_replace("/'(.+?)'/s", '', $sql);
 			} else {
 				$cleansql = self::stripSafeChar($sql);
@@ -510,11 +521,11 @@ class SqlPaser {
 	}
 
     /**
-     * @param $sql
+     * sql安全过滤
+     * @param string $sql sql语句 
      * @return string
      */
 	private static function stripSafeChar($sql) {
-	    $sql = "select * from zx_rule where name='/uploads/logo.png' /**asfasfdsad*/";
 		$len = strlen($sql);
 		$mark = $clean = '';
 		for ($i = 0; $i < $len; $i++) {
@@ -522,6 +533,7 @@ class SqlPaser {
             // mysql注释，/* */块注释，#行注释， -- 行注释
             // 防sql注入
 			switch ($str) {
+			    // 过滤用户输入
 				case '\'':
 					if (!$mark) {
 						$mark = '\'';
@@ -530,6 +542,7 @@ class SqlPaser {
 						$mark = '';
 					}
 					break;
+                // 过滤块级注释
 				case '/':
 					if (empty($mark) && $sql[$i + 1] == '*') {
 						$mark = '/*';
@@ -540,17 +553,20 @@ class SqlPaser {
 						$clean .= '*';
 					}
 					break;
+                // 过滤行内注释
 				case '#':
 					if (empty($mark)) {
 						$mark = $str;
 						$clean .= $str;
 					}
 					break;
+                // 换行重置标识位
 				case "\n":
 					if ($mark == '#' || $mark == '-- ') {
 						$mark = '';
 					}
 					break;
+                // 过滤行内注释
 				case '-':
 					if (empty($mark) && substr($sql, $i, 3) == '-- ') {
 						$mark = '-- ';

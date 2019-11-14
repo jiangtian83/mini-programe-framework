@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="eb486dca-b59e-4ca5-9483-f11ad8bec115" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api.php" afterPath="$PROJECT_DIR$/api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/config.php" afterPath="$PROJECT_DIR$/data/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/class/db.class.php" afterPath="$PROJECT_DIR$/framework/class/db.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/class/slave.db.class.php" afterPath="$PROJECT_DIR$/framework/class/slave.db.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/function/pdo.func.php" afterPath="$PROJECT_DIR$/framework/function/pdo.func.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/library/sentry/Raven/ErrorHandler.php" afterPath="$PROJECT_DIR$/framework/library/sentry/Raven/ErrorHandler.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,38 +20,51 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.sys.inc.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/common/bootstrap.sys.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            <state relative-caret-position="30">
+              <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
               <folding>
-                <marker date="1573640953000" expanded="true" signature="302:366" ph="SELECT acid ${tablename('account')}" />
-                <marker date="1573640953000" expanded="true" signature="674:748" ph="SELECT acid ${tablename('account_wechats')}" />
-                <marker date="1573640953000" expanded="true" signature="10334:10426" ph="SELECT group... ${tablename('mc_groups')}" />
-                <marker date="1573640953000" expanded="true" signature="15551:15666" ph="SELECT `id`,... ${tablename('qrcode')}" />
-                <marker date="1573640953000" expanded="true" signature="16686:16801" ph="SELECT `id`,... ${tablename('qrcode')}" />
-                <marker date="1573640953000" expanded="true" signature="16978:17095" ph="SELECT `id`,... ${tablename('qrcode')}" />
+                <marker date="1573719628000" expanded="true" signature="297:361" ph="SELECT acid ${tablename('account')}" />
+                <marker date="1573719628000" expanded="true" signature="669:743" ph="SELECT acid ${tablename('account_wechats')}" />
+                <marker date="1573719628000" expanded="true" signature="10329:10421" ph="SELECT group... ${tablename('mc_groups')}" />
+                <marker date="1573719628000" expanded="true" signature="15546:15661" ph="SELECT `id`,... ${tablename('qrcode')}" />
+                <marker date="1573719628000" expanded="true" signature="16681:16796" ph="SELECT `id`,... ${tablename('qrcode')}" />
+                <marker date="1573719628000" expanded="true" signature="16973:17090" ph="SELECT `id`,... ${tablename('qrcode')}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pdo.func.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/function/pdo.func.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="slave.db.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/class/slave.db.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/framework/class/db.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="27" column="30" lean-forward="false" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+              <folding>
+                <marker date="1573721213000" expanded="true" signature="6472:6493" ph="SELECT COUNT... ${tablename($tablename)}" />
+                <marker date="1573721213000" expanded="true" signature="7933:7945" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -56,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/framework/model/reply.mod.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
               <folding>
                 <marker date="1573630057000" expanded="true" signature="520:617" ph="SELECT * FRO... ${tablename('rule')}" />
                 <marker date="1573630057000" expanded="true" signature="747:768" ph="SELECT COUNT... ${tablename('rule')}" />
@@ -67,39 +85,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pdo.func.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/function/pdo.func.php">
+      <file leaf-file-name="ErrorHandler.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/library/sentry/Raven/ErrorHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+            <state relative-caret-position="264">
+              <caret line="104" column="46" lean-forward="true" selection-start-line="104" selection-start-column="46" selection-end-line="104" selection-end-column="46" />
+              <folding>
+                <element signature="e#6#195#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/library/sentry/Raven/Client.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1839">
+              <caret line="838" column="20" lean-forward="false" selection-start-line="838" selection-start-column="20" selection-end-line="838" selection-end-column="20" />
+              <folding>
+                <element signature="e#6#195#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/bootstrap.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-467">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/framework/class/db.class.php">
+      <file leaf-file-name="PDO.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/library/pdo/PDO.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="563" column="9" lean-forward="false" selection-start-line="563" selection-start-column="9" selection-end-line="563" selection-end-column="9" />
-              <folding>
-                <marker date="1573700836000" expanded="true" signature="6248:6269" ph="SELECT COUNT... ${tablename($tablename)}" />
-                <marker date="1573700836000" expanded="true" signature="7709:7721" ph="DELETE FROM " />
-                <marker date="1573700836000" expanded="true" signature="14982:15034" ph="select * fro... zx_rule" />
-                <marker date="1573700836000" expanded="true" signature="15035:15050" ph="/**asfasfdsa... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module.mod.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/model/module.mod.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2790">
-              <caret line="186" column="48" lean-forward="false" selection-start-line="186" selection-start-column="48" selection-end-line="186" selection-end-column="48" />
-              <folding>
-                <marker date="1573530718000" expanded="true" signature="6201:6269" ph="SELECT * FRO... ${tablename('modules_bindings')}" />
-              </folding>
+            <state relative-caret-position="268">
+              <caret line="205" column="17" lean-forward="false" selection-start-line="205" selection-start-column="17" selection-end-line="205" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,36 +133,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$_SERVER</find>
-      <find>json</find>
-      <find>json_</find>
-      <find>json_e</find>
-      <find>json_en</find>
-      <find>json_enceo</find>
-      <find>json_ence</find>
-      <find>json_enc</find>
-      <find>json_encode();</find>
-      <find>json_encode($);</find>
-      <find>json_encode($_);</find>
-      <find>json_encode($_S);</find>
-      <find>json_encode($_SER);</find>
-      <find>json_encode($_SERV);</find>
-      <find>json_encode($_SERVER);</find>
-      <find>json_encode($_SERVER)</find>
-      <find>json_encode$_SERVER)</find>
-      <find>json_encod$_SERVER)</find>
-      <find>$_SERVER)</find>
-      <find>J</find>
-      <find>E</find>
-      <find>e</find>
-      <find>echo j</find>
-      <find>echo json_en</find>
-      <find>echo json_encode</find>
-      <find>echo json_encode(</find>
-      <find>referer</find>
-      <find>_SERVER</find>
-      <find>$_W['isajax']</find>
-      <find>this-&gt;pdo =</find>
+      <find>error_report</find>
+      <find>v</find>
+      <find>log_errors</find>
+      <find>$exclude</find>
+      <find>lastHandledException</find>
+      <find>$old_exception_handler</find>
+      <find>pdo</find>
+      <find>$GLOBALS['error_handler']</find>
+      <find>@</find>
+      <find>$</find>
+      <find>$_</find>
+      <find>$_W</find>
+      <find>$_W['error_handler</find>
+      <find>$_W['error_handler'[</find>
+      <find>$_W['error_handler'</find>
+      <find>$_W['error_handler']</find>
+      <find>$GLOBALS['_W']['config']['setting']['development']</find>
+      <find>GL</find>
+      <find>global</find>
+      <find>global $</find>
+      <find>global $error_</find>
+      <find>global $error_ha</find>
+      <find>global $error_han</find>
+      <find>global $error_hand</find>
+      <find>global $error_handl</find>
+      <find>global $error_handler</find>
+      <find>error_handler</find>
+      <find>error_reporting</find>
+      <find>$this-&gt;exclude</find>
+      <find>old_exception_handler</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -158,11 +183,9 @@
         <option value="$PROJECT_DIR$/framework/version.inc.php" />
         <option value="$PROJECT_DIR$/framework/model/account.mod.php" />
         <option value="$PROJECT_DIR$/framework/library/sentry/Raven/Autoloader.php" />
-        <option value="$PROJECT_DIR$/framework/function/pdo.func.php" />
         <option value="$PROJECT_DIR$/framework/function/compat.func.php" />
         <option value="$PROJECT_DIR$/framework/function/communication.func.php" />
         <option value="$PROJECT_DIR$/framework/class/account.class.php" />
-        <option value="$PROJECT_DIR$/data/config.php" />
         <option value="$PROJECT_DIR$/addons/yyf_baidu/project.swan.json" />
         <option value="$PROJECT_DIR$/framework/bootstrap.inc.php" />
         <option value="$PROJECT_DIR$/framework/model/setting.mod.php" />
@@ -177,7 +200,11 @@
         <option value="$PROJECT_DIR$/framework/function/compat.biz.func.php" />
         <option value="$PROJECT_DIR$/framework/model/reply.mod.php" />
         <option value="$PROJECT_DIR$/framework/function/global.func.php" />
+        <option value="$PROJECT_DIR$/data/config.php" />
+        <option value="$PROJECT_DIR$/framework/library/sentry/Raven/ErrorHandler.php" />
         <option value="$PROJECT_DIR$/api.php" />
+        <option value="$PROJECT_DIR$/framework/class/slave.db.class.php" />
+        <option value="$PROJECT_DIR$/framework/function/pdo.func.php" />
         <option value="$PROJECT_DIR$/framework/class/db.class.php" />
       </list>
     </option>
@@ -321,7 +348,7 @@
     <property name="nodejs_interpreter_path" value="/usr/local/Cellar/node/11.1.0/bin/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="reply.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/reply.mod.php&#10;compat.bi&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.biz.func.php&#10;modul&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;common&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;cache&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;siteroot&#9;null&#9;null&#10;config&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;config.&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;module.&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;common.&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;template.fun&#9;FILE&#9;file:///Users/jt/app/we7/app/common/template.func.php&#10;common.func&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;install&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;install.&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;bootstrap.sys.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/web/common/bootstrap.sys.inc.php&#10;addons/yyf_baidu/project.swan.json&#9;FILE&#9;file:///Users/jt/app/we7/addons/yyf_baidu/project.swan.json&#10;data/config.php&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;framework/bootstrap.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/bootstrap.inc.php&#10;framework/class/account.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;framework/class/db.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;framework/class/loader.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;framework/function/cache.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;framework/function/communication.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;framework/function/compat.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;framework/function/global.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/global.func.php&#10;framework/function/pdo.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;framework/library/sentry/Raven/Autoloader.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/sentry/Raven/Autoloader.php&#10;account.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/account.mod.php&#10;module.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php&#10;version.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/version.inc.php&#10;welcome.ctrl.php&#9;FILE&#9;file:///Users/jt/app/we7/web/source/home/welcome.ctrl.php&#10;cache.fu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;agent&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;Raven_Autoloader&#9;null&#9;null&#10;loader&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;commu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;db.c&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;agent.&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;module.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php&#10;account.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/account.mod.php&#10;account&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;com&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;pdo.&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;acco&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;account.class&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;pdo.fun&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;compat.func&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;global&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/global.func.php" />
+    <property name="SearchEverywhereHistoryKey" value="confi&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;conf&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;slave&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/slave.db.class.php&#10;reply&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/reply.mod.php&#10;config&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;reply.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/reply.mod.php&#10;compat.bi&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.biz.func.php&#10;modul&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;common&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;cache&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;siteroot&#9;null&#9;null&#10;config.&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;module.&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;common.&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;template.fun&#9;FILE&#9;file:///Users/jt/app/we7/app/common/template.func.php&#10;common.func&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;install&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;install.&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;bootstrap.sys.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/web/common/bootstrap.sys.inc.php&#10;addons/yyf_baidu/project.swan.json&#9;FILE&#9;file:///Users/jt/app/we7/addons/yyf_baidu/project.swan.json&#10;data/config.php&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;framework/bootstrap.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/bootstrap.inc.php&#10;framework/class/account.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;framework/class/db.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;framework/class/loader.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;framework/function/cache.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;framework/function/communication.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;framework/function/compat.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;framework/function/global.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/global.func.php&#10;framework/function/pdo.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;framework/library/sentry/Raven/Autoloader.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/sentry/Raven/Autoloader.php&#10;account.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/account.mod.php&#10;module.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php&#10;version.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/version.inc.php&#10;welcome.ctrl.php&#9;FILE&#9;file:///Users/jt/app/we7/web/source/home/welcome.ctrl.php&#10;cache.fu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;agent&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;Raven_Autoloader&#9;null&#9;null&#10;loader&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;commu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;db.c&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;agent.&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;module.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php&#10;account.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/account.mod.php&#10;account&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;com&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;pdo.&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;acco&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -432,12 +459,12 @@
       <workItem from="1573198574494" duration="463000" />
       <workItem from="1573350762525" duration="26857000" />
       <workItem from="1573526764728" duration="18331000" />
-      <workItem from="1573698552551" duration="1143000" />
+      <workItem from="1573698552551" duration="10805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51299000" />
+    <option name="totallyTimeSpent" value="60961000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -447,6 +474,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -458,7 +486,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -473,63 +500,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/dom/dom_c.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="983" column="20" lean-forward="false" selection-start-line="983" selection-start-column="20" selection-end-line="983" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/library/phpexcel/PHPExcel/Reader/HTML.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="424" column="25" lean-forward="true" selection-start-line="424" selection-start-column="25" selection-end-line="424" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pcsite/static/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="4" column="3207" lean-forward="false" selection-start-line="4" selection-start-column="3207" selection-end-line="4" selection-end-column="3207" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1573109647000" expanded="true" signature="575:650" ph="SELECT * FRO... ${tablename('site_multi')}" />
-            <marker date="1573109647000" expanded="true" signature="870:927" ph="SELECT * FRO... ${tablename('site_styles')}" />
-            <marker date="1573109647000" expanded="true" signature="1216:1335" ph="SELECT `vari... ${tablename('site_styles_vars')}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/model/cache.mod.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="216" column="51" lean-forward="false" selection-start-line="216" selection-start-column="33" selection-end-line="216" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1573109846000" expanded="true" signature="125:193" ph="SELECT * FRO... ${tablename('site_multi')}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/SPL/SPL_f.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="52" column="20" lean-forward="true" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/framework/table/qrcode.table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -609,13 +579,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="100" column="27" lean-forward="false" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/library/sentry/Raven/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -623,6 +587,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -637,6 +602,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2097">
           <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+          <folding>
+            <marker date="1573437320000" expanded="true" signature="2816:3040" ph="SELECT w.*, ${tablename('account')}" />
+            <marker date="1573437320000" expanded="true" signature="7810:8023" ph="SELECT a.nam... ${tablename('modules')}" />
+            <marker date="1573437320000" expanded="true" signature="11835:12230" ph="SELECT a.nam... ${tablename('modules')}" />
+            <marker date="1573437320000" expanded="true" signature="15893:15967" ph="SELECT * FRO... ${tablename('uni_group')}" />
+            <marker date="1573437320000" expanded="true" signature="19234:19328" ph="SELECT uid F... ${tablename('uni_account_users')}" />
+            <marker date="1573437320000" expanded="true" signature="19783:19855" ph="SELECT * FRO... ${tablename('site_templates')}" />
+            <marker date="1573437320000" expanded="true" signature="19934:19999" ph="SELECT * FRO... ${tablename('site_templates')}" />
+            <marker date="1573437320000" expanded="true" signature="20050:20123" ph="SELECT id, n... ${tablename('users_group')}" />
+            <marker date="1573437320000" expanded="true" signature="20427:20492" ph="SELECT * FRO... ${tablename('site_templates')}" />
+            <marker date="1573437320000" expanded="true" signature="20556:20690" ph="SELECT `temp... ${tablename('uni_group')}" />
+            <marker date="1573437320000" expanded="true" signature="21122:21227" ph="SELECT * FRO... ${tablename('site_templates')}" />
+            <marker date="1573437320000" expanded="true" signature="21313:21392" ph="SELECT * FRO... ${tablename('site_templates')}" />
+            <marker date="1573437320000" expanded="true" signature="23414:23575" ph="SELECT * FRO... ${tablename('uni_account')}" />
+            <marker date="1573437320000" expanded="true" signature="23667:23821" ph="SELECT * FRO... ${tablename('uni_account')}" />
+            <marker date="1573437320000" expanded="true" signature="25801:26104" ph="SELECT * FRO... uniacid" />
+            <marker date="1573437320000" expanded="true" signature="25816:26008" ph="SELECT u.uni... ${tablename('uni_account_users')}" />
+            <marker date="1573437320000" expanded="true" signature="28573:28719" ph="SELECT COUNT... ${tablename('mc_mapping_fans')}" />
+            <marker date="1573437320000" expanded="true" signature="32602:32696" ph="SELECT uid F... ${tablename('uni_account_users')}" />
+            <marker date="1573437320000" expanded="true" signature="34585:34667" ph="SELECT COUNT... ${tablename('account_wechats')}" />
+            <marker date="1573437320000" expanded="true" signature="35498:35571" ph="SELECT id, m... " />
+            <marker date="1573437320000" expanded="true" signature="35777:35843" ph="SELECT acid ${tablename('account')}" />
+            <marker date="1573437320000" expanded="true" signature="38255:38375" ph="SELECT acid ${tablename('account_wechats')}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -644,6 +633,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <element signature="e#6#195#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -651,6 +643,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -658,6 +651,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -672,6 +666,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+          <folding>
+            <marker date="1573437586000" expanded="true" signature="19475:19576" ph="SELECT modul... " />
+            <marker date="1573437586000" expanded="true" signature="31333:31442" ph="SELECT `fani... ${tablename('mc_mapping_fans')}" />
+            <marker date="1573437586000" expanded="true" signature="37304:37388" ph="SELECT * FRO... ${tablename('core_paylog')}" />
+            <marker date="1573437586000" expanded="true" signature="38077:38181" ph="..." />
+            <marker date="1573437586000" expanded="true" signature="38123:38170" ph="{...}" />
+            <marker date="1573437586000" expanded="true" signature="38460:38511" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -679,14 +681,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="3" selection-end-column="3" />
-          <folding />
+          <folding>
+            <marker date="1573451686000" expanded="true" signature="845:859" ph="SELECT * FRO... ${tablename('core_settings')}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -694,6 +691,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding>
+            <marker date="1573109659000" expanded="true" signature="3258:3367" ph="SELECT `fani... ${tablename('mc_mapping_fans')}" />
+            <marker date="1573109659000" expanded="true" signature="4775:5640" ph="..." />
+            <marker date="1573109659000" expanded="true" signature="4955:5601" ph="[...]" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -712,14 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="38" lean-forward="false" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/themes/default/site/editor.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
@@ -727,17 +721,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/bootstrap.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/framework/function/safe.func.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
           <caret line="115" column="6" lean-forward="true" selection-start-line="115" selection-start-column="6" selection-end-line="115" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -745,6 +733,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="224" column="0" lean-forward="true" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+          <folding>
+            <element signature="e#6342#12297#1#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -760,6 +751,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1198">
           <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+          <folding>
+            <marker date="1573629131000" expanded="true" signature="579:667" ph="SELECT uid F... ${tablename('mc_mapping_fans')}" />
+            <marker date="1573629131000" expanded="true" signature="1115:1203" ph="SELECT uid F... ${tablename('mc_mapping_fans')}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -767,13 +762,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="93" column="7" lean-forward="false" selection-start-line="93" selection-start-column="7" selection-end-line="93" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_d.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="96" column="9" lean-forward="false" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
+          <folding>
+            <marker date="1573109891000" expanded="true" signature="1240:1303" ph="SELECT mid F... ${tablename('modules')}" />
+            <marker date="1573109891000" expanded="true" signature="1697:1760" ph="SELECT mid F... ${tablename('modules')}" />
+            <marker date="1573109891000" expanded="true" signature="3093:3183" ph="SELECT name,... ${tablename('modules')}" />
+            <marker date="1573109891000" expanded="true" signature="4511:4588" ph="SELECT * FRO... ${tablename('modules')}" />
+            <marker date="1573109891000" expanded="true" signature="6440:6523" ph="SELECT `name... ${tablename('modules')}" />
+            <marker date="1573109891000" expanded="true" signature="7508:7591" ph="SELECT `name... ${tablename('modules')}" />
+            <marker date="1573109891000" expanded="true" signature="8927:8996" ph="SELECT mid, ${tablename('modules')}" />
+            <marker date="1573109891000" expanded="true" signature="9610:9684" ph="SELECT * FRO... ${tablename('modules_bindings')}" />
+            <marker date="1573109891000" expanded="true" signature="11059:11122" ph="SELECT mid F... ${tablename('modules')}" />
+            <marker date="1573109891000" expanded="true" signature="13755:13828" ph="SELECT id,na... ${tablename('uni_group')}" />
+            <marker date="1573109891000" expanded="true" signature="14745:14756" ph="..." />
+            <marker date="1573109891000" expanded="true" signature="14819:14825" ph=" " />
+            <marker date="1573109891000" expanded="true" signature="14825:14831" ph=" " />
+            <marker date="1573109891000" expanded="true" signature="15217:15322" ph="SELECT `name... ${tablename('modules')}" />
+            <marker date="1573109891000" expanded="true" signature="15643:15654" ph="..." />
+            <marker date="1573109891000" expanded="true" signature="15755:15761" ph=" " />
+            <marker date="1573109891000" expanded="true" signature="15761:15767" ph=" " />
+            <marker date="1573109891000" expanded="true" signature="15801:15812" ph="..." />
+            <marker date="1573109891000" expanded="true" signature="17138:17216" ph="SELECT mid, ${tablename('modules')}" />
+            <marker date="1573109891000" expanded="true" signature="19720:19845" ph="SELECT * FRO... ${tablename('modules_bindings')}" />
+            <marker date="1573109891000" expanded="true" signature="20277:20387" ph="SELECT * FRO... ${tablename('modules_bindings')}" />
+            <marker date="1573109891000" expanded="true" signature="20801:20961" ph="DELETE FROM " />
+            <marker date="1573109891000" expanded="true" signature="21115:21281" ph="DELETE FROM " />
+            <marker date="1573109891000" expanded="true" signature="21437:21615" ph="DELETE FROM " />
+            <marker date="1573109891000" expanded="true" signature="22749:22755" ph=" " />
+            <marker date="1573109891000" expanded="true" signature="22755:22761" ph=" " />
+            <marker date="1573109891000" expanded="true" signature="22761:22767" ph=" " />
+            <marker date="1573109891000" expanded="true" signature="32414:33364" ph="..." />
+            <marker date="1573109891000" expanded="true" signature="32450:32963" ph="..." />
+            <marker date="1573109891000" expanded="true" signature="32975:33121" ph="..." />
+            <marker date="1573109891000" expanded="true" signature="32990:33019" ph="..." />
+            <marker date="1573109891000" expanded="true" signature="33031:33054" ph="..." />
+            <marker date="1573109891000" expanded="true" signature="33133:33157" ph="..." />
+            <marker date="1573109891000" expanded="true" signature="33172:33202" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -781,26 +805,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/model/reply.mod.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
           <folding>
-            <marker date="1573630057000" expanded="true" signature="520:617" ph="SELECT * FRO... ${tablename('rule')}" />
-            <marker date="1573630057000" expanded="true" signature="747:768" ph="SELECT COUNT... ${tablename('rule')}" />
-            <marker date="1573630057000" expanded="true" signature="1259:1363" ph="SELECT * FRO... ${tablename('rule_keyword')}" />
-            <marker date="1573630057000" expanded="true" signature="1489:1510" ph="SELECT COUNT... ${tablename('rule_keyword')}" />
+            <marker date="1573629010000" expanded="true" signature="1186:1619" ph="..." />
+            <marker date="1573629010000" expanded="true" signature="1382:1594" ph="{...}" />
+            <marker date="1573629010000" expanded="true" signature="26247:26630" ph="..." />
+            <marker date="1573629010000" expanded="true" signature="26277:26618" ph="..." />
+            <marker date="1573629010000" expanded="true" signature="26315:26605" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/class/slave.db.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -815,37 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/common/bootstrap.sys.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/function/pdo.func.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding>
-            <marker date="1573640953000" expanded="true" signature="302:366" ph="SELECT acid ${tablename('account')}" />
-            <marker date="1573640953000" expanded="true" signature="674:748" ph="SELECT acid ${tablename('account_wechats')}" />
-            <marker date="1573640953000" expanded="true" signature="10334:10426" ph="SELECT group... ${tablename('mc_groups')}" />
-            <marker date="1573640953000" expanded="true" signature="15551:15666" ph="SELECT `id`,... ${tablename('qrcode')}" />
-            <marker date="1573640953000" expanded="true" signature="16686:16801" ph="SELECT `id`,... ${tablename('qrcode')}" />
-            <marker date="1573640953000" expanded="true" signature="16978:17095" ph="SELECT `id`,... ${tablename('qrcode')}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/framework/model/module.mod.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2790">
@@ -856,15 +836,165 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/framework/library/pdo/PDO.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="205" column="17" lean-forward="false" selection-start-line="205" selection-start-column="17" selection-end-line="205" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="411" column="8" lean-forward="false" selection-start-line="411" selection-start-column="8" selection-end-line="411" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/common/bootstrap.sys.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_d.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="340" column="23" lean-forward="false" selection-start-line="340" selection-start-column="9" selection-end-line="340" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/longbing_card/core/thinkphp/library/think/exception/ThrowableError.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="512" column="20" lean-forward="false" selection-start-line="512" selection-start-column="20" selection-end-line="512" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/library/sentry/Raven/Util.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          <folding>
+            <marker date="1573719628000" expanded="true" signature="297:361" ph="SELECT acid ${tablename('account')}" />
+            <marker date="1573719628000" expanded="true" signature="669:743" ph="SELECT acid ${tablename('account_wechats')}" />
+            <marker date="1573719628000" expanded="true" signature="10329:10421" ph="SELECT group... ${tablename('mc_groups')}" />
+            <marker date="1573719628000" expanded="true" signature="15546:15661" ph="SELECT `id`,... ${tablename('qrcode')}" />
+            <marker date="1573719628000" expanded="true" signature="16681:16796" ph="SELECT `id`,... ${tablename('qrcode')}" />
+            <marker date="1573719628000" expanded="true" signature="16973:17090" ph="SELECT `id`,... ${tablename('qrcode')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/function/pdo.func.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/class/slave.db.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="24" lean-forward="false" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/source/utility/wxcode.ctrl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/bootstrap.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-467">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/library/sentry/Raven/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1839">
+          <caret line="838" column="20" lean-forward="false" selection-start-line="838" selection-start-column="20" selection-end-line="838" selection-end-column="20" />
+          <folding>
+            <element signature="e#6#195#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/library/sentry/Raven/ErrorHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="104" column="46" lean-forward="true" selection-start-line="104" selection-start-column="46" selection-end-line="104" selection-end-column="46" />
+          <folding>
+            <element signature="e#6#195#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/model/reply.mod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <marker date="1573630057000" expanded="true" signature="520:617" ph="SELECT * FRO... ${tablename('rule')}" />
+            <marker date="1573630057000" expanded="true" signature="747:768" ph="SELECT COUNT... ${tablename('rule')}" />
+            <marker date="1573630057000" expanded="true" signature="1259:1363" ph="SELECT * FRO... ${tablename('rule_keyword')}" />
+            <marker date="1573630057000" expanded="true" signature="1489:1510" ph="SELECT COUNT... ${tablename('rule_keyword')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/framework/class/db.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="563" column="9" lean-forward="false" selection-start-line="563" selection-start-column="9" selection-end-line="563" selection-end-column="9" />
+        <state relative-caret-position="166">
+          <caret line="27" column="30" lean-forward="false" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
           <folding>
-            <marker date="1573700836000" expanded="true" signature="6248:6269" ph="SELECT COUNT... ${tablename($tablename)}" />
-            <marker date="1573700836000" expanded="true" signature="7709:7721" ph="DELETE FROM " />
-            <marker date="1573700836000" expanded="true" signature="14982:15034" ph="select * fro... zx_rule" />
-            <marker date="1573700836000" expanded="true" signature="15035:15050" ph="/**asfasfdsa... " />
+            <marker date="1573721213000" expanded="true" signature="6472:6493" ph="SELECT COUNT... ${tablename($tablename)}" />
+            <marker date="1573721213000" expanded="true" signature="7933:7945" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
