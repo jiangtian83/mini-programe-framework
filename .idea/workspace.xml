@@ -80,13 +80,13 @@
       <file leaf-file-name="db.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/framework/class/db.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="516" column="84" lean-forward="false" selection-start-line="516" selection-start-column="84" selection-end-line="516" selection-end-column="84" />
+            <state relative-caret-position="596">
+              <caret line="563" column="9" lean-forward="false" selection-start-line="563" selection-start-column="9" selection-end-line="563" selection-end-column="9" />
               <folding>
-                <marker date="1573698857000" expanded="true" signature="6248:6269" ph="SELECT COUNT... ${tablename($tablename)}" />
-                <marker date="1573698857000" expanded="true" signature="7709:7721" ph="DELETE FROM " />
-                <marker date="1573698857000" expanded="true" signature="14982:15034" ph="select * fro... zx_rule" />
-                <marker date="1573698857000" expanded="true" signature="15035:15048" ph="/**asfasfdsa... " />
+                <marker date="1573700836000" expanded="true" signature="6248:6269" ph="SELECT COUNT... ${tablename($tablename)}" />
+                <marker date="1573700836000" expanded="true" signature="7709:7721" ph="DELETE FROM " />
+                <marker date="1573700836000" expanded="true" signature="14982:15034" ph="select * fro... zx_rule" />
+                <marker date="1573700836000" expanded="true" signature="15035:15050" ph="/**asfasfdsa... " />
               </folding>
             </state>
           </provider>
@@ -432,12 +432,12 @@
       <workItem from="1573198574494" duration="463000" />
       <workItem from="1573350762525" duration="26857000" />
       <workItem from="1573526764728" duration="18331000" />
-      <workItem from="1573698552551" duration="304000" />
+      <workItem from="1573698552551" duration="1143000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50460000" />
+    <option name="totallyTimeSpent" value="51299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -858,13 +858,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/framework/class/db.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="516" column="84" lean-forward="false" selection-start-line="516" selection-start-column="84" selection-end-line="516" selection-end-column="84" />
+        <state relative-caret-position="596">
+          <caret line="563" column="9" lean-forward="false" selection-start-line="563" selection-start-column="9" selection-end-line="563" selection-end-column="9" />
           <folding>
-            <marker date="1573698857000" expanded="true" signature="6248:6269" ph="SELECT COUNT... ${tablename($tablename)}" />
-            <marker date="1573698857000" expanded="true" signature="7709:7721" ph="DELETE FROM " />
-            <marker date="1573698857000" expanded="true" signature="14982:15034" ph="select * fro... zx_rule" />
-            <marker date="1573698857000" expanded="true" signature="15035:15048" ph="/**asfasfdsa... " />
+            <marker date="1573700836000" expanded="true" signature="6248:6269" ph="SELECT COUNT... ${tablename($tablename)}" />
+            <marker date="1573700836000" expanded="true" signature="7709:7721" ph="DELETE FROM " />
+            <marker date="1573700836000" expanded="true" signature="14982:15034" ph="select * fro... zx_rule" />
+            <marker date="1573700836000" expanded="true" signature="15035:15050" ph="/**asfasfdsa... " />
           </folding>
         </state>
       </provider>
