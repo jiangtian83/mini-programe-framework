@@ -4,7 +4,6 @@
     <list default="true" id="eb486dca-b59e-4ca5-9483-f11ad8bec115" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api.php" afterPath="$PROJECT_DIR$/api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/class/db.class.php" afterPath="$PROJECT_DIR$/framework/class/db.class.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,15 +18,15 @@
       <file leaf-file-name="api.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+            <state relative-caret-position="195">
+              <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
               <folding>
-                <marker date="1573722790000" expanded="true" signature="302:366" ph="SELECT acid ${tablename('account')}" />
-                <marker date="1573722790000" expanded="true" signature="674:748" ph="SELECT acid ${tablename('account_wechats')}" />
-                <marker date="1573722790000" expanded="true" signature="10334:10426" ph="SELECT group... ${tablename('mc_groups')}" />
-                <marker date="1573722790000" expanded="true" signature="15551:15666" ph="SELECT `id`,... ${tablename('qrcode')}" />
-                <marker date="1573722790000" expanded="true" signature="16686:16801" ph="SELECT `id`,... ${tablename('qrcode')}" />
-                <marker date="1573722790000" expanded="true" signature="16978:17095" ph="SELECT `id`,... ${tablename('qrcode')}" />
+                <marker date="1573722928000" expanded="true" signature="302:366" ph="SELECT acid ${tablename('account')}" />
+                <marker date="1573722928000" expanded="true" signature="674:748" ph="SELECT acid ${tablename('account_wechats')}" />
+                <marker date="1573722928000" expanded="true" signature="10334:10426" ph="SELECT group... ${tablename('mc_groups')}" />
+                <marker date="1573722928000" expanded="true" signature="15551:15666" ph="SELECT `id`,... ${tablename('qrcode')}" />
+                <marker date="1573722928000" expanded="true" signature="16686:16801" ph="SELECT `id`,... ${tablename('qrcode')}" />
+                <marker date="1573722928000" expanded="true" signature="16978:17095" ph="SELECT `id`,... ${tablename('qrcode')}" />
               </folding>
             </state>
           </provider>
@@ -110,16 +109,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="346">
               <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PDO.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/library/pdo/PDO.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="205" column="17" lean-forward="false" selection-start-line="205" selection-start-column="17" selection-end-line="205" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -344,7 +333,7 @@
     <property name="nodejs_interpreter_path" value="/usr/local/Cellar/node/11.1.0/bin/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="confi&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;conf&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;slave&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/slave.db.class.php&#10;reply&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/reply.mod.php&#10;config&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;reply.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/reply.mod.php&#10;compat.bi&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.biz.func.php&#10;modul&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;common&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;cache&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;siteroot&#9;null&#9;null&#10;config.&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;module.&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;common.&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;template.fun&#9;FILE&#9;file:///Users/jt/app/we7/app/common/template.func.php&#10;common.func&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;install&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;install.&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;bootstrap.sys.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/web/common/bootstrap.sys.inc.php&#10;addons/yyf_baidu/project.swan.json&#9;FILE&#9;file:///Users/jt/app/we7/addons/yyf_baidu/project.swan.json&#10;data/config.php&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;framework/bootstrap.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/bootstrap.inc.php&#10;framework/class/account.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;framework/class/db.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;framework/class/loader.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;framework/function/cache.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;framework/function/communication.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;framework/function/compat.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;framework/function/global.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/global.func.php&#10;framework/function/pdo.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;framework/library/sentry/Raven/Autoloader.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/sentry/Raven/Autoloader.php&#10;account.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/account.mod.php&#10;module.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php&#10;version.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/version.inc.php&#10;welcome.ctrl.php&#9;FILE&#9;file:///Users/jt/app/we7/web/source/home/welcome.ctrl.php&#10;cache.fu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;agent&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;Raven_Autoloader&#9;null&#9;null&#10;loader&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;commu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;db.c&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;agent.&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;module.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php&#10;account.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/account.mod.php&#10;account&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;com&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;pdo.&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;acco&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php" />
+    <property name="SearchEverywhereHistoryKey" value="wesession.&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/wesession.class.php&#10;modu&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;common.&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;visit.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/visit.mod.php&#10;attachment.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/attachment.mod.php&#10;confi&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;conf&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;slave&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/slave.db.class.php&#10;reply&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/reply.mod.php&#10;config&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;reply.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/reply.mod.php&#10;compat.bi&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.biz.func.php&#10;modul&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;common&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;cache&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;siteroot&#9;null&#9;null&#10;config.&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;module.&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;template.fun&#9;FILE&#9;file:///Users/jt/app/we7/app/common/template.func.php&#10;common.func&#9;FILE&#9;file:///Users/jt/app/we7/web/common/common.func.php&#10;install&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;install.&#9;FILE&#9;file:///Users/jt/app/we7/install.php&#10;bootstrap.sys.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/web/common/bootstrap.sys.inc.php&#10;addons/yyf_baidu/project.swan.json&#9;FILE&#9;file:///Users/jt/app/we7/addons/yyf_baidu/project.swan.json&#10;data/config.php&#9;FILE&#9;file:///Users/jt/app/we7/data/config.php&#10;framework/bootstrap.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/bootstrap.inc.php&#10;framework/class/account.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/account.class.php&#10;framework/class/db.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;framework/class/loader.class.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;framework/function/cache.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;framework/function/communication.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;framework/function/compat.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/compat.func.php&#10;framework/function/global.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/global.func.php&#10;framework/function/pdo.func.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/pdo.func.php&#10;framework/library/sentry/Raven/Autoloader.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/sentry/Raven/Autoloader.php&#10;account.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/account.mod.php&#10;module.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mod.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php&#10;version.inc.php&#9;FILE&#9;file:///Users/jt/app/we7/framework/version.inc.php&#10;welcome.ctrl.php&#9;FILE&#9;file:///Users/jt/app/we7/web/source/home/welcome.ctrl.php&#10;cache.fu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/cache.func.php&#10;agent&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;Raven_Autoloader&#9;null&#9;null&#10;loader&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/loader.class.php&#10;commu&#9;FILE&#9;file:///Users/jt/app/we7/framework/function/communication.func.php&#10;db.c&#9;FILE&#9;file:///Users/jt/app/we7/framework/class/db.class.php&#10;agent.&#9;FILE&#9;file:///Users/jt/app/we7/framework/library/agent/agent.class.php&#10;module.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/module.mod.php&#10;setting.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/setting.mod.php&#10;account.mo&#9;FILE&#9;file:///Users/jt/app/we7/framework/model/account.mod.php" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -455,12 +444,12 @@
       <workItem from="1573198574494" duration="463000" />
       <workItem from="1573350762525" duration="26857000" />
       <workItem from="1573526764728" duration="18331000" />
-      <workItem from="1573698552551" duration="12161000" />
+      <workItem from="1573698552551" duration="12300000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62317000" />
+    <option name="totallyTimeSpent" value="62456000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -496,27 +485,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/framework/table/qrcode.table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/table/Account/Aliapp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/function/cache.file.func.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/framework/function/az.func.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -797,20 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/common/common.func.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="4" selection-end-column="3" />
-          <folding>
-            <marker date="1573629010000" expanded="true" signature="1186:1619" ph="..." />
-            <marker date="1573629010000" expanded="true" signature="1382:1594" ph="{...}" />
-            <marker date="1573629010000" expanded="true" signature="26247:26630" ph="..." />
-            <marker date="1573629010000" expanded="true" signature="26277:26618" ph="..." />
-            <marker date="1573629010000" expanded="true" signature="26315:26605" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/framework/function/global.func.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -818,16 +772,6 @@
           <folding>
             <marker date="1573636008000" expanded="true" signature="12580:12587" ph="«" />
             <marker date="1573636008000" expanded="true" signature="14120:14127" ph="»" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/model/module.mod.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2790">
-          <caret line="186" column="48" lean-forward="false" selection-start-line="186" selection-start-column="48" selection-end-line="186" selection-end-column="48" />
-          <folding>
-            <marker date="1573530718000" expanded="true" signature="6201:6269" ph="SELECT * FRO... ${tablename('modules_bindings')}" />
           </folding>
         </state>
       </provider>
@@ -924,19 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/model/reply.mod.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-          <folding>
-            <marker date="1573630057000" expanded="true" signature="520:617" ph="SELECT * FRO... ${tablename('rule')}" />
-            <marker date="1573630057000" expanded="true" signature="747:768" ph="SELECT COUNT... ${tablename('rule')}" />
-            <marker date="1573630057000" expanded="true" signature="1259:1363" ph="SELECT * FRO... ${tablename('rule_keyword')}" />
-            <marker date="1573630057000" expanded="true" signature="1489:1510" ph="SELECT COUNT... ${tablename('rule_keyword')}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -980,17 +911,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/framework/model/attachment.mod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/model/visit.mod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1573109812000" expanded="true" signature="2459:2544" ph="SELECT MAX(d... ${tablename('system_stat_visit')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/model/module.mod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11407">
+          <caret line="186" column="48" lean-forward="false" selection-start-line="186" selection-start-column="48" selection-end-line="186" selection-end-column="48" />
+          <folding>
+            <marker date="1573530718000" expanded="true" signature="6201:6269" ph="SELECT * FRO... ${tablename('modules_bindings')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/model/reply.mod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <marker date="1573630057000" expanded="true" signature="520:617" ph="SELECT * FRO... ${tablename('rule')}" />
+            <marker date="1573630057000" expanded="true" signature="747:768" ph="SELECT COUNT... ${tablename('rule')}" />
+            <marker date="1573630057000" expanded="true" signature="1259:1363" ph="SELECT * FRO... ${tablename('rule_keyword')}" />
+            <marker date="1573630057000" expanded="true" signature="1489:1510" ph="SELECT COUNT... ${tablename('rule_keyword')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/common/common.func.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="4" selection-end-column="3" />
+          <folding>
+            <marker date="1573629010000" expanded="true" signature="1186:1619" ph="..." />
+            <marker date="1573629010000" expanded="true" signature="1382:1594" ph="{...}" />
+            <marker date="1573629010000" expanded="true" signature="26247:26630" ph="..." />
+            <marker date="1573629010000" expanded="true" signature="26277:26618" ph="..." />
+            <marker date="1573629010000" expanded="true" signature="26315:26605" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/class/wesession.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1830">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1573109842000" expanded="true" signature="3609:3700" ph="SELECT * FRO... ${tablename('core_sessions')}" />
+            <marker date="1573109842000" expanded="true" signature="4406:4479" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        <state relative-caret-position="195">
+          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
           <folding>
-            <marker date="1573722790000" expanded="true" signature="302:366" ph="SELECT acid ${tablename('account')}" />
-            <marker date="1573722790000" expanded="true" signature="674:748" ph="SELECT acid ${tablename('account_wechats')}" />
-            <marker date="1573722790000" expanded="true" signature="10334:10426" ph="SELECT group... ${tablename('mc_groups')}" />
-            <marker date="1573722790000" expanded="true" signature="15551:15666" ph="SELECT `id`,... ${tablename('qrcode')}" />
-            <marker date="1573722790000" expanded="true" signature="16686:16801" ph="SELECT `id`,... ${tablename('qrcode')}" />
-            <marker date="1573722790000" expanded="true" signature="16978:17095" ph="SELECT `id`,... ${tablename('qrcode')}" />
+            <marker date="1573722928000" expanded="true" signature="302:366" ph="SELECT acid ${tablename('account')}" />
+            <marker date="1573722928000" expanded="true" signature="674:748" ph="SELECT acid ${tablename('account_wechats')}" />
+            <marker date="1573722928000" expanded="true" signature="10334:10426" ph="SELECT group... ${tablename('mc_groups')}" />
+            <marker date="1573722928000" expanded="true" signature="15551:15666" ph="SELECT `id`,... ${tablename('qrcode')}" />
+            <marker date="1573722928000" expanded="true" signature="16686:16801" ph="SELECT `id`,... ${tablename('qrcode')}" />
+            <marker date="1573722928000" expanded="true" signature="16978:17095" ph="SELECT `id`,... ${tablename('qrcode')}" />
           </folding>
         </state>
       </provider>

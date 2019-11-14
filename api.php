@@ -4,7 +4,6 @@
 define('IN_API', true);
 require_once './framework/bootstrap.inc.php';
 load()->model('reply'); // 加载模块reply
-die;
 load()->model('attachment');
 
 load()->model('visit');
@@ -12,6 +11,7 @@ load()->model('visit');
 load()->app('common');
 load()->classs('wesession');
 $hash = $_GPC['hash'];
+die;
 if(!empty($hash)) {
 	$id = pdo_fetchcolumn("SELECT acid FROM " . tablename('account') . " WHERE hash = :hash", array(':hash' => $hash));
 }
