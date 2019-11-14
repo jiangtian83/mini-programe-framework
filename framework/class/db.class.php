@@ -26,11 +26,11 @@ class DB {
 	public function __construct($name = 'master') {
 		global $_W;
 		$this->cfg = $_W['config']['db'];
+		// 删除了全局变量里缓存的数据库配置信息
         unset($_W['config']['db']);
         // tablepre在bootstrap.inc.php做了共享配置，slave_status在配置文件即做了配置，on or off
 		$_W['config']['db']['tablepre'] = $this->cfg['tablepre'];
 		$_W['config']['db']['slave_status'] = $this->cfg['slave_status'];
-		echo json_encode($_W);
 		$this->connect($name);
 	}
 
@@ -41,6 +41,7 @@ class DB {
 			$cfg = $this->cfg[$name];
 		}
 		$this->tablepre = $cfg['tablepre'];
+		echo json_encode($cfg);
 		if(empty($cfg)) {
 			exit("The master database is not found, Please checking 'data/config.php'");
 		}
