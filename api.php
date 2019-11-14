@@ -11,10 +11,10 @@ load()->model('visit');
 load()->app('common');
 load()->classs('wesession');
 $hash = $_GPC['hash'];
-die;
 if(!empty($hash)) {
 	$id = pdo_fetchcolumn("SELECT acid FROM " . tablename('account') . " WHERE hash = :hash", array(':hash' => $hash));
 }
+die;
 if(!empty($_GPC['appid'])) {
 	$appid = ltrim($_GPC['appid'], '/');
 	if ($appid == 'wx570bc396a51b8ff8') {
