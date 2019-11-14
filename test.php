@@ -1,5 +1,4 @@
 <?php
-$arr = ['a' => 1573526860, 'b' => 1573526859, 'c' => 1573526858];
-asort($arr);
-var_dump($arr);
+$str = 'abcd\'ef';
+echo strlen($str);
 ?>
