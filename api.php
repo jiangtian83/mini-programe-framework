@@ -7,11 +7,10 @@ load()->model('reply'); // 加载模块reply
 load()->model('attachment');
 
 load()->model('visit');
-
+die;
 load()->app('common');
 load()->classs('wesession');
 $hash = $_GPC['hash'];
-die;
 if(!empty($hash)) {
 	$id = pdo_fetchcolumn("SELECT acid FROM " . tablename('account') . " WHERE hash = :hash", array(':hash' => $hash));
 }
