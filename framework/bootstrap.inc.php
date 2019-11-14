@@ -17,7 +17,8 @@ if(!file_exists($configfile)) {
 	if(file_exists(IA_ROOT . '/install.php')) {
 		header('Content-Type: text/html; charset=utf-8');
 		echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
-		echo "如果你还没安装本程序，请运行<a href='".(strpos($_SERVER['SCRIPT_NAME'], 'web') === false ? './install.php' : '../install.php')."'> install.php 进入安装&gt;&gt; </a><br/><br/>";
+		echo json_encode($_SERVER['SCRIPT_NAME']);
+		echo "如果你还没安装本程序，请运行<a href='" . (strpos($_SERVER['SCRIPT_NAME'], 'web') === false ? './install.php' : '../install.php') . "'> install.php 进入安装&gt;&gt; </a><br/><br/>";
 		exit();
 	} else {
 		header('Content-Type: text/html; charset=utf-8');
